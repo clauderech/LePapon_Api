@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "codigo": "8923",
+      "descricao": "PEPSI COLA PET 600ML CX12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 46.44,
+      "data": "2025-08-07"
+    },
+    {
+      "codigo": "34770",
+      "descricao": "RED BULL SUGAR FREE POMELO LATA 250ML FOUR PACK NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 4.0,
+      "preco_unitario_final": 32.24,
+      "data": "2025-08-07"
+    }
+  ]
+}

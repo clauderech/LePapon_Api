@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 63.2,
+      "data": "2025-09-05"
+    },
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAQ GARRAFA VIDRO 900ML",
+      "unidade": "Un",
+      "qtd": 12,
+      "qtd_trib": 12,
+      "preco_unitario_final": 13.99,
+      "data": "2025-09-05"
+    }
+  ]
+}

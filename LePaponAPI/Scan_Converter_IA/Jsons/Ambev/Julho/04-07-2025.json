@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL FECOP ST BC 255,60 ALQ:2,00 VL:5,11",
+      "unidade": "CX",
+      "qtd": 5,
+      "qtd_trib": 60.0,
+      "preco_unitario_final": 38.16,
+      "data": "2025-07-04"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL FECOP ST BC246,24 ALQ:2,00 VL 4,92",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 52.8,
+      "data": "2025-07-04"
+    },
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 62.4,
+      "data": "2025-07-04"
+    },
+    {
+      "codigo": "12948",
+      "descricao": "BRAHMA CHOPP ZERO LATA 350ML SH C/12 NPAL FECOP ST BC56,52 ALQ:2,00 VL 1,13",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 36.55,
+      "data": "2025-07-04"
+    }
+  ]
+}

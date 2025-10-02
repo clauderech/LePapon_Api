@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAO GARRAFA VIDRO 900ML",
+      "unidade": "Un",
+      "qtd": 12,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 13.99,
+      "data": "2025-03-03"
+    },
+    {
+      "codigo": "22382",
+      "descricao": "PASSPORT SELECTION GARRAFA VIDRO 1 L",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 39.9,
+      "data": "2025-03-03"
+    },
+    {
+      "codigo": "21791",
+      "descricao": "PIRASSUNUNGA 51 GARRAFA VIDRO 965ML",
+      "unidade": "Un",
+      "qtd": 6,
+      "qtd_trib": 6.0,
+      "preco_unitario_final": 13.99,
+      "data": "2025-03-03"
+    },
+    {
+      "codigo": "2940",
+      "descricao": "SODA LIMONADA ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 53.44,
+      "data": "2025-03-03"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "CX",
+      "qtd": 5,
+      "qtd_trib": 60.0,
+      "preco_unitario_final": 16.2,
+      "data": "2025-03-03"
+    },
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 5,
+      "qtd_trib": 60.0,
+      "preco_unitario_final": 73.56,
+      "data": "2025-03-03"
+    },
+    {
+      "codigo": "930",
+      "descricao": "PEPSI COLA PET 2L CAIXA C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 52.72,
+      "data": "2025-03-03"
+    }
+  ]
+}

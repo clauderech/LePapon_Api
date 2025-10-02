@@ -1,0 +1,13 @@
+{
+  "produtos": [
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 3.18,
+      "data": "2025-07-24"
+    }
+  ]
+}

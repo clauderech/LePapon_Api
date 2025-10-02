@@ -1,0 +1,58 @@
+{
+  "produtos": [
+    {
+      "codigo": "26462",
+      "descricao": "ORIGINAL LT 473ML CX CARTAO C/12",
+      "unidade": "un",
+      "qtd": 2,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 60.72,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "25837",
+      "descricao": "SPATEN N LT 473ML CX CARTAO C/12",
+      "unidade": "un",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 56.88,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "9081",
+      "descricao": "MALZBIER BRAHMA LATA 350ML SH C/12 NPAL",
+      "unidade": "un",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 52.92,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "9093",
+      "descricao": "PEPSI TWIST LATA 350ML SH C/12 NPAL",
+      "unidade": "un",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 25.02,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAQ GARRAFA VIDRO 900ML",
+      "unidade": "un",
+      "qtd": 12,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 13.99,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "6905",
+      "descricao": "FONTE DA ILHA AGUA M CG PVC 500ML CAIXA C/12.",
+      "unidade": "un",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 14.6,
+      "data": "2025-08-29"
+    }
+  ]
+}

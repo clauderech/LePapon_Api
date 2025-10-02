@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "codigo": "23672",
+      "descricao": "CERVEGELA PLASTICA BRAHMA 1 UN P/ GFA 600M",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 39.9,
+      "data": "2025-07-25"
+    },
+    {
+      "codigo": "988",
+      "descricao": "BRAHMA CHOPP 600ML",
+      "unidade": "Dz",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 68.5,
+      "data": "2025-07-25"
+    }
+  ]
+}

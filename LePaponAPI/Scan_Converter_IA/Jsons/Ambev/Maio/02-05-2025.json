@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "7982",
+      "descricao": "GATORADE LIMAO PET 500ML SIXPACK",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-01"
+    },
+    {
+      "codigo": "856",
+      "descricao": "SUKITA PET 2L CAIXA C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 53.44,
+      "data": "2025-05-01"
+    },
+    {
+      "codigo": "9431",
+      "descricao": "POLAR EXPORT LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 49.68,
+      "data": "2025-05-01"
+    },
+    {
+      "codigo": "930",
+      "descricao": "PEPSI COLA PET 2L CAIXA C/8",
+      "unidade": "CX",
+      "qtd": 3,
+      "qtd_trib": 24,
+      "preco_unitario_final": 54.16,
+      "data": "2025-05-01"
+    },
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 5,
+      "qtd_trib": 60,
+      "preco_unitario_final": 81.24,
+      "data": "2025-05-01"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48,
+      "preco_unitario_final": 52.8,
+      "data": "2025-05-01"
+    },
+    {
+      "codigo": "21970",
+      "descricao": "TRIDENT MENTA ENVELOPE 8G CX C/21",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 1,
+      "preco_unitario_final": 31.9,
+      "data": "2025-05-01"
+    }
+  ]
+}

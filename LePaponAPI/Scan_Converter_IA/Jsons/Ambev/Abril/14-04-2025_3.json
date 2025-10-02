@@ -1,0 +1,13 @@
+{
+  "produtos": [
+    {
+      "codigo": "12948",
+      "descricao": "BRAHMA CHOPP ZERO LATA 350ML SH C/12 NPAL",
+      "unidade": "Un",
+      "qtd": 2.0,
+      "qtd_trib": 2.0,
+      "preco_unitario_final": 3.24,
+      "data": "2025-04-12"
+    }
+  ]
+}

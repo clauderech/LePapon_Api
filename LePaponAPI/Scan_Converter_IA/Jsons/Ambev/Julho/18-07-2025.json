@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 62.4,
+      "data": "2025-07-18"
+    },
+    {
+      "codigo": "26462",
+      "descricao": "ORIGINAL LT 473ML CX CARTAO C/12",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 55.86,
+      "data": "2025-07-18"
+    },
+    {
+      "codigo": "9431",
+      "descricao": "POLAR EXPORT LT 473ML SH C/12 NPAL",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 48.69,
+      "data": "2025-07-18"
+    },
+    {
+      "codigo": "856",
+      "descricao": "SUKITA PET 2L CAIXA C/8",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 55.76,
+      "data": "2025-07-18"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "cx",
+      "qtd": 10,
+      "qtd_trib": 120,
+      "preco_unitario_final": 18.36,
+      "data": "2025-07-18"
+    },
+    {
+      "codigo": "2940",
+      "descricao": "SODA LIMONADA ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 53.52,
+      "data": "2025-07-18"
+    },
+    {
+      "codigo": "18268",
+      "descricao": "SUKITA PET 200ML SH C/12",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 13.77,
+      "data": "2025-07-18"
+    }
+  ]
+}

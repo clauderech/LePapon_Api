@@ -1,0 +1,139 @@
+{
+  "produtos": [
+    {
+      "codigo": "7985",
+      "descricao": "GATORADE MARACUJA PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "7983",
+      "descricao": "GATORADE MORANGO-MARACUJA PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "18152",
+      "descricao": "GUARANA CHPT ANTARCTICA PET 200ML SH C/12",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 17.28,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "cx",
+      "qtd": 6,
+      "qtd_trib": 72,
+      "preco_unitario_final": 15.5666,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "856",
+      "descricao": "SUKITA PET 2L CAIXA C/8",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 53.44,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "7981",
+      "descricao": "GATORADE LARANJA PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL",
+      "unidade": "cx",
+      "qtd": 4,
+      "qtd_trib": 48,
+      "preco_unitario_final": 46.425,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "6905",
+      "descricao": "AGUA M F DA ILHA C/G PVC 500ML CAIXA C/12",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 14.6,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "930",
+      "descricao": "PEPSI COLA PET 2L CAIXA C/8",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 16,
+      "preco_unitario_final": 54.16,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "6903",
+      "descricao": "AGUA M F DA ILHA S/G PVC 500ML CAIXA C/12",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 12.2,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "32067",
+      "descricao": "GATORADE BERRY BLUE PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "30898",
+      "descricao": "LACTA OURO BRANCO WAFER RECHEADO PCT 25G D 21,9000",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 1,
+      "preco_unitario_final": 21.9,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "34459",
+      "descricao": "FLORESTAL BALA BRAZILIAN COFFEE PCT PLAST 1 3,4800",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1,
+      "preco_unitario_final": 3.48,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "21791",
+      "descricao": "PIRASSUNUNGA 51 GARRAFA VIDRO 965ML",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1,
+      "preco_unitario_final": 13.99,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "8923",
+      "descricao": "PEPSI COLA PET 600ML CX12 NPAL",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 41.88,
+      "data": "2025-05-17"
+    }
+  ]
+}

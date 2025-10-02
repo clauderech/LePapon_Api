@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 38.16,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 16,
+      "preco_unitario_final": 60.96,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "7979",
+      "descricao": "GATORADE FRUTAS CITRICAS PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "7980",
+      "descricao": "GATORADE TANGERINA PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 88.44,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "7977",
+      "descricao": "GATORADE UVA PET 500ML SIXPACK",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 6,
+      "preco_unitario_final": 28.02,
+      "data": "2025-05-17"
+    },
+    {
+      "codigo": "21791",
+      "descricao": "PIRASSUNUNGA 51 GARRAFA VIDRO 965ML",
+      "unidade": "Un",
+      "qtd": 6,
+      "qtd_trib": 6,
+      "preco_unitario_final": 13.99,
+      "data": "2025-05-17"
+    }
+  ]
+}

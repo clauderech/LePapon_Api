@@ -1,0 +1,40 @@
+{
+    "produtos_colunas": [
+        "id_Prod",
+        "subCategProd",
+        "nome_Prod",
+        "Valor_Prod",
+        "unit"
+    ],
+    "categorias_produtos_colunas": [
+        "id_CategProd",
+        "nome_CatProd"
+    ],
+    "categ_bebidas_colunas": [
+        "id_CategBebidas",
+        "nome_CategBebidas"
+    ],
+    "sub_categ_produtos_colunas": [
+        "id_SubCategProd",
+        "nome_SubCategProd",
+        "idCategProd"
+    ],
+    "sub_categoria_bebidas_colunas": [
+        "idSubCategBebidas",
+        "idCategBebidas",
+        "nomeSubCategBebidas"
+    ],
+    "produtos_todos_colunas": [
+        "id_Prod",
+        "nome_Prod",
+        "Valor_Prod",
+        "unit"
+    ],
+    "produtos_bebidas_colunas": [
+        "id_Prod",
+        "subCategBebidas",
+        "nome_Prod",
+        "Valor_Prod",
+        "unit"
+    ]
+}

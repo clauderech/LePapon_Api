@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC FECOP ST BC: 231,84 ALQ:2,00 VL 4,64",
+      "unidade": "Dz",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 88.44,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "22382",
+      "descricao": "PASSPORT SELECTION GARRAFA VIDRO 1 L",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1,
+      "preco_unitario_final": 38.9,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "22384",
+      "descricao": "NATASHA GARRAFA VIDRO 900ML FECOP ST RETIDO BC:50,16 ALQ:2,00 VL:50 16",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1,
+      "preco_unitario_final": 38.9,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "18152",
+      "descricao": "GUARANA CHP ANTARCTICA PET 200ML SH C/12 FECOP ST RETIDO BC:20,32 ALQ:2,00 VL:20 32",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 17.9,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "930",
+      "descricao": "PEPSI COLA PET 2L CAIXA C/8",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 16,
+      "preco_unitario_final": 57.84,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "9081",
+      "descricao": "MALZBIER BRAHMA LATA 350ML SH C/12 NPAL FECOP ST BC 61,56 ALQ:2,00 VL 1,23",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 48.96,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "cx",
+      "qtd": 10,
+      "qtd_trib": 120,
+      "preco_unitario_final": 18.36,
+      "data": "2025-06-20"
+    }
+  ]
+}

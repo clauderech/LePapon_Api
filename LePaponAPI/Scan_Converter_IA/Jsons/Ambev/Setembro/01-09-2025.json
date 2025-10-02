@@ -1,0 +1,13 @@
+{
+  "produtos": [
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM",
+      "unidade": "Dz",
+      "qtd": 7,
+      "qtd_trib": 84,
+      "preco_unitario_final": 88.44,
+      "data": "2025-09-01"
+    }
+  ]
+}

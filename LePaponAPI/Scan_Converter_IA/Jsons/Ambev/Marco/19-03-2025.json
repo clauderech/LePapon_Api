@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "12948",
+      "descricao": "BRAHMA CHOPP ZERO LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 38.88,
+      "data": "2025-03-19"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 49.8,
+      "data": "2025-03-19"
+    },
+    {
+      "codigo": "9431",
+      "descricao": "POLAR EXPORT LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 46.69,
+      "data": "2025-03-19"
+    },
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 5,
+      "qtd_trib": 60.0,
+      "preco_unitario_final": 81.24,
+      "data": "2025-03-19"
+    },
+    {
+      "codigo": "14135",
+      "descricao": "BUDWEISER LATA 473ML SIX-PACK SH C/2 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 55.92,
+      "data": "2025-03-19"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "CX",
+      "qtd": 3,
+      "qtd_trib": 36.0,
+      "preco_unitario_final": 16.2,
+      "data": "2025-03-19"
+    },
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 35.04,
+      "data": "2025-03-19"
+    }
+  ]
+}

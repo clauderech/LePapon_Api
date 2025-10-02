@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L",
+      "unidade": "Dz",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 64.0875,
+      "data": "2025-04-04"
+    },
+    {
+      "codigo": "9096",
+      "descricao": "PEPSI COLA LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 27.08,
+      "data": "2025-04-04"
+    },
+    {
+      "codigo": "18152",
+      "descricao": "GUARANA CHP ANTARCTICA PET 200ML SH C/12",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 14.55,
+      "data": "2025-04-04"
+    },
+    {
+      "codigo": "22177",
+      "descricao": "BUDWEISER ZERO LT SLEEK 350ML C 8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 23.59,
+      "data": "2025-04-04"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "14135",
+      "descricao": "BUDWEISER LATA 473ML SIX-PACK SH C/2 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 58.92,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "9431",
+      "descricao": "POLAR EXPORT LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 49.68,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 52.8,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "9277",
+      "descricao": "PEPSI ZERO PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 49.1,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "930",
+      "descricao": "PEPSI COLA PET 2L CAIXA C/8",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 16.0,
+      "preco_unitario_final": 57.84,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "20178",
+      "descricao": "PEPSI TWIST PET 200ML SH C/12",
+      "unidade": "CX",
+      "qtd": 8,
+      "qtd_trib": 96.0,
+      "preco_unitario_final": 13.77,
+      "data": "2025-08-29"
+    },
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 6,
+      "qtd_trib": 72.0,
+      "preco_unitario_final": 38.16,
+      "data": "2025-08-29"
+    }
+  ]
+}

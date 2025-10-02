@@ -1,0 +1,121 @@
+{
+  "produtos": [
+    {
+      "codigo": "9277",
+      "descricao": "PEPSI ZERO PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 48.19,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "8919",
+      "descricao": "GUARANA CHP ANTARCTICA PET 600ML CX12 NPAL",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 43.1,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "26462",
+      "descricao": "ORIGINAL LT 473ML CX CARTAO C/12",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 59.76,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "8923",
+      "descricao": "PEPSI COLA PET 600ML CX12 NPAL",
+      "unidade": "CX",
+      "qtd": 3,
+      "qtd_trib": 36.0,
+      "preco_unitario_final": 31.94,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "13061",
+      "descricao": "H2OH LIMONETO PET 500ML SHRINK C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 37.8,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "2938",
+      "descricao": "GUARANA CHP ANTARCTICA DIET PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 45.89,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "856",
+      "descricao": "SUKITA PET 2L CAIXA C/8",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 16.0,
+      "preco_unitario_final": 53.44,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "9089",
+      "descricao": "SUKITA LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 31.2,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "11102",
+      "descricao": "H2OH CITRUS C/GAS PET 500ML SHRINK C/12 NPA",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 31.84,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAO GARRAFA VIDRO 900ML",
+      "unidade": "Un",
+      "qtd": 18,
+      "qtd_trib": 18.0,
+      "preco_unitario_final": 13.99,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 36.12,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "2132",
+      "descricao": "GUARANA CHP ANTARCTICA PET 1L CAIXA C/6 NOVA RIO",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 27.3,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "253",
+      "descricao": "SUKITA PET 1L CAIXA C/6",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 24.0,
+      "preco_unitario_final": 27.3,
+      "data": "2025-04-14"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "codigo": "12948",
+      "descricao": "BRAHMA CHOPP ZERO LATA 350ML SH C/12",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 24.48,
+      "data": "2025-03-18"
+    },
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAQ GARRAFA VIDRO 900ML",
+      "unidade": "Un",
+      "qtd": 6,
+      "qtd_trib": 6.0,
+      "preco_unitario_final": 13.99,
+      "data": "2025-03-18"
+    },
+    {
+      "codigo": "21921",
+      "descricao": "MARTINI BIANCO GARRAFA VIDRO 750ML",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 39.9,
+      "data": "2025-03-18"
+    }
+  ]
+}

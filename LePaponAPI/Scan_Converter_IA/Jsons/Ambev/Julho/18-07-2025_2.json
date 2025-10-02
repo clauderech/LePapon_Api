@@ -1,0 +1,49 @@
+{
+  "produtos": [
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAQ GARRAFA VIDRO 900ML FECOP ST RETIDO BC:142,56 ALQ:2,00 VL:142,56",
+      "unidade": "Un",
+      "qtd": 12,
+      "qtd_trib": 12,
+      "preco_unitario_final": 13.99,
+      "data": "2025-07-17"
+    },
+    {
+      "codigo": "14135",
+      "descricao": "BUDWEISER LATA 473ML SIX-PACK SH C/2 NPAL FECOP ST BC:67,44 ALQ:2,00 ML 1,35",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 54.21,
+      "data": "2025-07-17"
+    },
+    {
+      "codigo": "8923",
+      "descricao": "PEPSI COLA PET 600ML CX12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 46.44,
+      "data": "2025-07-17"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL FECOP ST BC:123,12 ALQ:2,00 VL:2,46",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 52.8,
+      "data": "2025-07-17"
+    },
+    {
+      "codigo": "1744",
+      "descricao": "POLAR EXPORT GFA VD 1L COM TTC FECOP ST BC :115,08 ALQ:2,00 VL 2,30",
+      "unidade": "Dz",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 75.08,
+      "data": "2025-07-17"
+    }
+  ]
+}

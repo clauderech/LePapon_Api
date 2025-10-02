@@ -1,0 +1,58 @@
+{
+  "produtos": [
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 52.8,
+      "data": "2025-09-18"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "CX",
+      "qtd": 10,
+      "qtd_trib": 120.0,
+      "preco_unitario_final": 19.56,
+      "data": "2025-09-18"
+    },
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 88.44,
+      "data": "2025-09-18"
+    },
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 16.0,
+      "preco_unitario_final": 63.2,
+      "data": "2025-09-18"
+    },
+    {
+      "codigo": "856",
+      "descricao": "SUKITA PET 21 CATXA C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 0.0,
+      "preco_unitario_final": 59.52,
+      "data": "2025-09-18"
+    },
+    {
+      "codigo": "21791",
+      "descricao": "PIRASSUNUNGA 51 GARRAFA VIDRO 965ML",
+      "unidade": "Un",
+      "qtd": 3,
+      "qtd_trib": 3.0,
+      "preco_unitario_final": 13.9,
+      "data": "2025-09-18"
+    }
+  ]
+}

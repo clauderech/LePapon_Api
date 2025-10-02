@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "codigo": "22641",
+      "descricao": "PRESIDENTE CONHAQ GARRAFA VIDRO 900ML FECOP ST RETIDO BC:142,56 ALQ:2,00 Preço Unitário Final:13,9900",
+      "unidade": "Un",
+      "qtd": 12,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 13.99,
+      "data": "2025-08-01"
+    },
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 16.0,
+      "preco_unitario_final": 7.5237,
+      "data": "2025-08-01"
+    },
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL FECOP ST BC :204,48 ALQ:2,00",
+      "unidade": "un",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 2.6047,
+      "data": "2025-08-01"
+    }
+  ]
+}

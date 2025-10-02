@@ -1,0 +1,4 @@
+Gdk-Message: 16:46:11.432: Unable to load  from the cursor theme
+
+(flet:9423): Atk-CRITICAL **: 16:46:11.432: atk_socket_embed: assertion 'plug_id != NULL' failed
+package:media_kit_libs_linux registered.

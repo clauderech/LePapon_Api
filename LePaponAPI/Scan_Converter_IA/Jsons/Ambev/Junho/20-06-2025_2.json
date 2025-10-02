@@ -1,0 +1,130 @@
+{
+  "produtos": [
+    {
+      "codigo": "21788",
+      "descricao": "BALLANTINES FINEST GARRAFA VIDRO 1 L PECOP ST RETIDO BC:96,84 ALQ:2,00 VL:96,84 Preço Unitario Final:92,9000",
+      "unidade": "Un",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 92.9,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "18268",
+      "descricao": "SUKITA PET 200ML SH C/12 Preço Unitario Final:18,3600",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 18.36,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "856",
+      "descricao": "SUKITA PET 2L CAIXA C/8 Preço Unitario Final:55,7600",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 55.76,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "21974",
+      "descricao": "TRIDENT TUTTI-FRUTTI ENVELOPE 8G CX C/21 Preço Unitario Final:32,9000",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 32.9,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "2940",
+      "descricao": "SODA LIMONADA ANTARCTICA PET 2L SHRINK C/8 Preço Unitario Final:51,1700",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 51.17,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "2937",
+      "descricao": "GUARANA CHP ANTARCTICA PET 2L SHRINK C/8 Preço Unitario Final:62,4000",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 8.0,
+      "preco_unitario_final": 62.4,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL FECOP ST BC :246,24 ALQ:2,00 VL:4,92 Preço Unitario Final:52,8000",
+      "unidade": "cx",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 52.8,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL FECOP ST BC :204,48 ALQ:2,00 VL:4,09 Preço Unitario Final:38,1600",
+      "unidade": "cx",
+      "qtd": 4,
+      "qtd_trib": 48.0,
+      "preco_unitario_final": 38.16,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "8919",
+      "descricao": "GUARANA CHP ANTARCTICA PET 600ML CX12 NPAL Preço Unitario Final:46,4400",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 46.44,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "8931",
+      "descricao": "SUKITA PET 600ML CX12 NPAL Preço Unitario Final:46,4400",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 46.44,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "2132",
+      "descricao": "GUARANA CHP ANTARCTICA PET 1L CAIXA C/6 NOVA RIO Preço Unitario Final:33,9000",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 33.9,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "18152",
+      "descricao": "GUARANA CHP ANTARCTICA PET 200ML SH C/12 Preço Unitario Final:16,5600",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 16.56,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "9084",
+      "descricao": "GUARANA CHP ANTARCTICA LATA 350ML SH C/12 NPAL Preço Unitario Final:29,6400",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12.0,
+      "preco_unitario_final": 29.64,
+      "data": "2025-06-20"
+    },
+    {
+      "codigo": "29733",
+      "descricao": "HALLS MELANCIA ENVELOPE 28G CX C/21 Preço Unitario Final:22,9000",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 1.0,
+      "preco_unitario_final": 22.9,
+      "data": "2025-06-20"
+    }
+  ]
+}

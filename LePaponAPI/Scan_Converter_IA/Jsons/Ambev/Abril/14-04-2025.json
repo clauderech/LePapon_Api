@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "12948",
+      "descricao": "BRAHMA CHOPP ZERO LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 38.88,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "18266",
+      "descricao": "PEPSI COLA PET 200ML SH C/12",
+      "unidade": "CX",
+      "qtd": 4,
+      "qtd_trib": 48,
+      "preco_unitario_final": 16.2,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "1164",
+      "descricao": "SUKITA UVA LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 23.14,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "2940",
+      "descricao": "SODA LIMONADA ANTARCTICA PET 2L SHRINK C/8",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 8,
+      "preco_unitario_final": 53.44,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "9320",
+      "descricao": "BRAHMA CHOPP LT 473ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 52.8,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "5753",
+      "descricao": "PEPSI COLA PET 2,25L CAIXA C/6",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 12,
+      "preco_unitario_final": 48.12,
+      "data": "2025-04-14"
+    },
+    {
+      "codigo": "8791",
+      "descricao": "H2OH LIMAO C/GAS PET 500ML CAIXA C/12",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 31.86,
+      "data": "2025-04-14"
+    }
+  ]
+}
