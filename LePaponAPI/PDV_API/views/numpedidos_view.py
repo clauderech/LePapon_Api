@@ -158,7 +158,14 @@ def numpedidos_view(page: ft.Page):
             }
             
             ordem_resp = ordempedidos_api.create(nova_ordem)
-            ordem_id = ordem_resp if isinstance(ordem_resp, (int, str)) else ordem_resp.get('id', '')
+            if ordem_resp is None:
+                ordem_id = ''
+            elif isinstance(ordem_resp, (int, str)):
+                ordem_id = ordem_resp
+            elif isinstance(ordem_resp, dict):
+                ordem_id = ordem_resp.get('id', '')
+            else:
+                ordem_id = ''
             
             # Navega para produtos_todos passando os dados necessários
             page.go(f"/produtos_todos?numPedido={id_num_pedido.value}&idOrderPedido={ordem_id}&idCliente={id_cliente.value}&nome={nome.value}&sobrenome={sobrenome.value}&fone={fone.value}")
