@@ -24,7 +24,7 @@ recebido_api = RecebidoAPI(BASE_URL)
 
 # Configurações
 from dotenv import load_dotenv
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../.env'))
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../../.env'))
 
 API_KEY = os.getenv("MINHA_API_KEY")
 HEADERS = {"x-api-key": API_KEY}
