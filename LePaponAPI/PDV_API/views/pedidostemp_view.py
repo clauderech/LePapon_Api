@@ -18,7 +18,7 @@ from reportlab.pdfgen import canvas
 import paramiko
 
 # Carrega variáveis de ambiente
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../.env'))
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../../.env'))
 
 pedidostemp_api = PedidosTempAPI(BASE_URL)
 numpedidos_api = NumPedidosAPI(BASE_URL)

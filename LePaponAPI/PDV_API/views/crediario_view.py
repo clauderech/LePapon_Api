@@ -14,7 +14,7 @@ import re
 from dotenv import load_dotenv
 from config import BASE_URL
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../.env'))
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../../.env'))
 
 crediario_api = CrediarioAPI(BASE_URL)
 clientes_api = ClientesAPI(BASE_URL)

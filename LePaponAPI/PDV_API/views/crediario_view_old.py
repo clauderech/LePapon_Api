@@ -13,7 +13,7 @@ import os
 import re
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../.env'))
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../../.env'))
 
 BASE_URL = "http://lepapon.api:3000"
 crediario_api = CrediarioAPI(BASE_URL)

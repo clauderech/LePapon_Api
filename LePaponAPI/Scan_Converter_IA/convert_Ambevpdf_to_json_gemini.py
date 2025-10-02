@@ -7,7 +7,7 @@ import json
 import re
 import argparse
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), './.env'))
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../.env'))
 
 google_api_key = os.getenv("GEMINI_API_KEY")
 if google_api_key is None:
