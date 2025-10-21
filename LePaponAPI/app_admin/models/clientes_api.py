@@ -10,6 +10,16 @@ class ClientesAPI:
     def get_by_id(self, id):
         return requests.get(f"{self.base_url}/api/clientes/{id}").json()
 
+    def get_by_fone(self, fone):
+        """Busca clientes pelo número de telefone."""
+        try:
+            response = requests.get(f"{self.base_url}/api/clientes", params={'fone': fone})
+            response.raise_for_status()  # Lança uma exceção para respostas de erro (4xx ou 5xx)
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            print(f"Erro ao buscar cliente por fone: {e}")
+            return None
+
     def create(self, data):
         return requests.post(f"{self.base_url}/api/clientes", json=data).json()
 

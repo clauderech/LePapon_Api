@@ -1,4 +1,66 @@
-flet
-requests
-pandas
+# ===== DEPENDÊNCIAS PRINCIPAIS =====
+# Framework para aplicações desktop modernas
+flet>=0.21.0
 
+# Cliente HTTP para APIs REST
+requests>=2.31.0
+
+# Manipulação e análise de dados
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Manipulação de datas e timezone
+pytz>=2023.3
+python-dateutil>=2.8.2
+
+# ===== GERAÇÃO DE DOCUMENTOS =====
+# Geração de PDFs
+reportlab>=4.0.0
+
+# ===== BANCO DE DADOS =====
+# Conector MySQL
+mysql-connector-python>=8.0.0
+
+# ===== CONECTIVIDADE =====
+# WebSocket client/server
+websockets>=12.0
+
+# SSH/SFTP client
+paramiko>=3.3.0
+
+# ===== CONFIGURAÇÃO E AMBIENTE =====
+# Carregamento de variáveis de ambiente
+python-dotenv>=1.0.0
+
+# ===== INTELIGÊNCIA ARTIFICIAL =====
+# Google Generative AI (Gemini)
+google-generativeai>=0.7.0
+
+# ===== DESENVOLVIMENTO =====
+# Type hints para versões antigas do Python
+typing-extensions>=4.7.0
+
+# ===== DEPENDÊNCIAS ESPECÍFICAS DO PROJETO =====
+# Timezone data
+tzdata>=2023.3
+
+# ===== DEPENDÊNCIAS OPCIONAIS (para funcionalidades específicas) =====
+# Para sistemas que não têm sqlite3 built-in
+# sqlite3  # Geralmente incluído no Python
+
+# Para logs estruturados (se necessário no futuro)
+# structlog>=23.1.0
+
+# Para validação de dados (se necessário no futuro)  
+# pydantic>=2.0.0
+
+# ===== COMENTÁRIOS DE INSTALAÇÃO =====
+# Para instalar todas as dependências:
+# pip install -r requirements.txt
+#
+# Para instalar apenas dependências básicas:
+# pip install flet requests pandas python-dotenv
+#
+# Para ambientes de desenvolvimento:
+# pip install -r requirements.txt
+# pip install pytest black flake8 mypy  # Ferramentas de desenvolvimento

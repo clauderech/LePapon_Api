@@ -1,0 +1,67 @@
+{
+  "produtos": [
+    {
+      "codigo": "8923",
+      "descricao": "PEPSI COLA PET 600ML CX12 NPAL",
+      "unidade": "cx",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 46.44,
+      "data": "2025-10-02"
+    },
+    {
+      "codigo": "1695",
+      "descricao": "BRAHMA CHOPP GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 88.44,
+      "data": "2025-10-02"
+    },
+    {
+      "codigo": "1744",
+      "descricao": "POLAR EXPORT GFA VD 1L COM TTC",
+      "unidade": "Dz",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 78.75,
+      "data": "2025-10-02"
+    },
+    {
+      "codigo": "9069",
+      "descricao": "BRAHMA CHOPP LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 39.24,
+      "data": "2025-10-02"
+    },
+    {
+      "codigo": "9089",
+      "descricao": "SUKITA LATA 350ML SH C/12 NPAL",
+      "unidade": "CX",
+      "qtd": 1,
+      "qtd_trib": 12,
+      "preco_unitario_final": 35.64,
+      "data": "2025-10-02"
+    },
+    {
+      "codigo": "18152",
+      "descricao": "GUARANA CHP ANTARCTICA PET 200ML SH C/12",
+      "unidade": "cx",
+      "qtd": 2,
+      "qtd_trib": 24,
+      "preco_unitario_final": 19.56,
+      "data": "2025-10-02"
+    },
+    {
+      "codigo": "2132",
+      "descricao": "GUARANA CHP ANTARCTICA PET 1L CAIXA C/6 NOVA RIO",
+      "unidade": "CX",
+      "qtd": 2,
+      "qtd_trib": 12,
+      "preco_unitario_final": 28.74,
+      "data": "2025-10-02"
+    }
+  ]
+}

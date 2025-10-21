@@ -1,5 +1,5 @@
 from google import genai
-from google.genai import types
+from google.generativeai import types
 import pathlib
 import os
 from dotenv import load_dotenv
@@ -14,6 +14,8 @@ if google_api_key is None:
   print("Please set the GEMINI_API_KEY environment variable.")
 
 client = genai.Client(api_key=google_api_key)
+# Escolha o modelo que deseja usar
+
 
 # Retrieve and encode the PDF byte
 # Parse CLI args: allow user to provide PDF filename and output JSON filename
@@ -32,27 +34,30 @@ def process_pdf_file(input_path: pathlib.Path, output_path: pathlib.Path, sleep:
     if not input_path.exists():
         raise FileNotFoundError(f"PDF não encontrado: {input_path}")
 
-    prompt = "Extraia os dados dos produtos do documento (seção 'DADOS DOS PRODUTOS /SERVIÇOS'). Retorne apenas JSON válido."
+    #prompt = "Extraia os dados dos produtos do documento (seção 'DADOS DOS PRODUTOS /SERVIÇOS'). Retorne apenas JSON válido."
+    prompt= '''"Você é um assistente que extrai dados estruturados. " 
+        "EXIJA que a resposta contenha APENAS um JSON válido (sem texto adicional, sem backticks), " 
+        "no formato de uma lista de objetos. Cada objeto deve ter as chaves: " 
+        "'codigo' (string), 'descricao' (string MAXIMO 250), 'unidade' (string), 'qtd' (number), " 
+        "'qtd_trib' (number), 'preco_unitario_final' (number), 'data' (string YYYY-MM-DD). " 
+        "Se não houver produtos, retorne a lista vazia: []. " 
+        "Não inclua comentários, explicações ou marcações. Responda somente com o JSON." '''
+      
+    # Upload PDF file to Gemini
+    pdf_resource = client.files.upload(
+        file=input_path
+    )
+
 
     response = client.models.generate_content(
       model="gemini-2.5-flash",
-      config=types.GenerateContentConfig(
-        system_instruction=(
-          "Você é um assistente que extrai dados estruturados. "
-          "EXIJA que a resposta contenha APENAS um JSON válido (sem texto adicional, sem backticks), "
-          "no formato de uma lista de objetos. Cada objeto deve ter as chaves: "
-          "'codigo' (string), 'descricao' (string MAXIMO 250), 'unidade' (string), 'qtd' (number), "
-          "'qtd_trib' (number), 'preco_unitario_final' (number), 'data' (string YYYY-MM-DD). "
-          "Se não houver produtos, retorne a lista vazia: []. "
-          "Não inclua comentários, explicações ou marcações. Responda somente com o JSON."
-        )
-      ),
+
       contents=[
-          types.Part.from_bytes(
-            data=input_path.read_bytes(),
-            mime_type='application/pdf',
-          ),
-          prompt])
+          pdf_resource,
+          prompt
+      ],
+    )
+      
 
     resp_text = response.text if response.text is not None else ""
     parsed = parse_gemini_json(resp_text)
