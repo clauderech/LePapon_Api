@@ -22,6 +22,8 @@ from dotenv import load_dotenv
 # Carrega variáveis de ambiente
 load_dotenv()
 
+MINNHA_API_KEY = os.getenv('MINHA_API_KEY')
+
 class LePaponAPI:
     """Cliente para a API de Pedidos do LePapon"""
     
@@ -125,9 +127,8 @@ class LePaponAPI:
         """
         try:
             response = requests.get(
-                f"{self.base_url}/api/pedidos",
+                f"{self.base_url}/api/pedidos/fone/{fone}",
                 headers=self.headers,
-                params={'fone': fone},
                 timeout=10
             )
             response.raise_for_status()

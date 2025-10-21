@@ -8,8 +8,9 @@ class OrderPedidoAPI:
         self.base_url = base_url
         
 
-    def criar_ordem_pedido(self, num_pedido, hora):
+    def criar_ordem_pedido(self, id_cliente, num_pedido, hora):
         data = {
+            "id_cliente": id_cliente,
             "numPedido": num_pedido,
             "hora": hora
         }

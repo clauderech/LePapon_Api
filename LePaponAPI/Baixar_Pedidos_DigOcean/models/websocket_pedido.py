@@ -4,7 +4,7 @@ import websockets
 import json
 from pedidosDropletModel import LePaponAPI
 
-URL_BASE = "http://lepapon.api"
+URL_BASE = "https://lepapon.com.br"
 
 api = LePaponAPI(URL_BASE)
 
@@ -29,11 +29,12 @@ async def listen_custom_messages():
                     if event == 'custom_message':
                         session_id = payload.get('session_id')
                         novo = payload.get('novo')
-                        pedido = api.buscar_por_fone(session_id)
-                        print(f"\npedido encontrado: {pedido}")
                         print(f"\n📨 Mensagem customizada:")
                         print(f"   Sessão: {session_id}")
                         print(f"   Dados: {novo}")
+                        await asyncio.sleep(5)
+                        pedido = api.buscar_por_fone(session_id)
+                        print(f"\npedido encontrado: {pedido}")
                     
                     elif event == 'session_update':
                         session_id = payload.get('session_id')
