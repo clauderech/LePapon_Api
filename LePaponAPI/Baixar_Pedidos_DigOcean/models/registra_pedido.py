@@ -17,7 +17,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constantes
-API_BASE_URL = "https://lepapon.api"
+API_BASE_URL = "http://lepapon.api"  # URL base da API (HTTP, não HTTPS)
 ID_CLIENTE_SEM_CADASTRO = 13  # ID usado quando o cliente não possui cadastro no sistema
 DELAY_NUM_PEDIDO = 3  # segundos
 DELAY_ORDER_PEDIDO = 2  # segundos
@@ -158,11 +158,11 @@ def _criar_registros_pedido(
                 v_unit = produto_info.get('Valor_Prod', 0.0)
             
             time.sleep(DELAY_ITEM_PEDIDO)
-            
+            print(f"numPedido: {criar_num.get('id')}, idOrderPedido: {criar_order.get('id')}, id_Prod: {pedido.get('id_Prod')}, V_unit: {v_unit}, qtd: {pedido.get('qtd')}, data: {data_pedido}, hora: {hora_pedido}")
             resultado = pedido_api.criar_pedido({
                 "id_cliente": id_cliente,
-                "numPedido": criar_num,
-                "idOrderPedido": criar_order,
+                "numPedido": criar_num.get('id'),
+                "idOrderPedido": criar_order.get('id'),
                 "id_Prod": pedido.get('id_Prod'),
                 "V_unit": v_unit,
                 "qtd": pedido.get('qtd'),
@@ -258,6 +258,7 @@ def processar_json(dados_json: str) -> Optional[Dict[str, Any]]:
             cliente = client.get_by_fone(fone_cliente)
         except Exception as e:
             logger.error(f"Erro ao buscar cliente: {str(e)}")
+        print(cliente)
 
         # Determina os dados do cliente a serem usados
         if cliente:

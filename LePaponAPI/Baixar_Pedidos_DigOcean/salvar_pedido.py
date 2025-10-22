@@ -13,7 +13,7 @@ class PedidoManager:
     Combina funcionalidades de busca, registro e processamento de pedidos.
     """
     
-    def __init__(self, local_base_url: str = "http://lepapon.api:3000/api"):
+    def __init__(self, local_base_url: str = "http://lepapon.com.br:3000/api"):
         self.base_url = local_base_url
         self.num_pedido_api = NumPedidoAPI()
         self.pedido_api = PedidoAPI()

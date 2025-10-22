@@ -16,7 +16,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constantes
-URL_BASE_API = "https://lepapon.com.br"
+URL_BASE_API = "http://lepapon.api"  # URL base da API (HTTP, não HTTPS)
+URL_BASE_API_REMOTE = "https://lepapon.com.br"  # URL base da API remota
 WEBSOCKET_URL = "ws://lepapon.com.br:3001"
 WEBSOCKET_TOKEN = "lepapon-secret"  # TODO: Mover para variável de ambiente
 PING_INTERVAL = 20  # segundos
@@ -47,7 +48,7 @@ class Metricas:
 metricas = Metricas()
 
 # Inicialização da API
-api = LePaponAPI(URL_BASE_API)
+api = LePaponAPI(URL_BASE_API_REMOTE)
 
 
 def _criar_chave_pedido(session_id: str, timestamp: Optional[str] = None) -> str:

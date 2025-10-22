@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BASE_URL = os.getenv("BASE_URL", "http://lepapon.api:3000/api")
+BASE_URL = os.getenv("BASE_URL", "http://lepapon.api/api")
 PRODUTOS_ENDPOINT = f"{BASE_URL}/produtostodos"
 
 class Produtos:
