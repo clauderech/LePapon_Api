@@ -1,8 +1,8 @@
-# listar_pedidos.py
+# pedidosDropletModel.py
 """
-Script para listar pedidos da API LePapon
+Script para gerenciar pedidos da API LePapon
 Autor: Sistema LePapon
-Data: 15/10/2025
+Data: 27/10/2025
 
 Funcionalidades:
 - Listar todos os pedidos
@@ -10,6 +10,7 @@ Funcionalidades:
 - Filtrar pedidos por data, cliente ou produto
 - Exportar para CSV/JSON
 - Estatísticas de pedidos
+- Criar pedidos usando registra_pedido.py
 """
 
 import requests
@@ -18,6 +19,8 @@ import os
 from typing import Optional, List, Dict
 import csv
 from dotenv import load_dotenv
+from registra_pedido import processar_json
+from datetime import datetime
 
 # Carrega variáveis de ambiente
 load_dotenv()
@@ -94,25 +97,91 @@ class LePaponAPI:
     
     def criar_pedido(self, dados: Dict) -> Optional[Dict]:
         """
-        Cria um novo pedido
+        Cria um novo pedido usando o registra_pedido.py
         
         Args:
-            dados: Dados do pedido (idOrdemPedidos, idItem, Qtde, Observ)
+            dados: Dados do pedido (nome, fone, id_Prod, qtd, observ)
+                  - nome: Nome do cliente
+                  - fone: Telefone do cliente  
+                  - id_Prod: ID do produto
+                  - qtd: Quantidade
+                  - observ: Observação (opcional)
             
         Returns:
-            Pedido criado ou None se erro
+            Resultado do processamento ou None se erro
         """
         try:
-            response = requests.post(
-                f"{self.base_url}/api/pedidos",
-                headers=self.headers,
-                json=dados,
-                timeout=10
-            )
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f"❌ Erro ao criar pedido: {e}")
+            # Validação dos dados obrigatórios
+            campos_obrigatorios = ['nome', 'fone', 'id_Prod', 'qtd']
+            for campo in campos_obrigatorios:
+                if campo not in dados or not dados[campo]:
+                    print(f"❌ Campo obrigatório ausente: {campo}")
+                    return None
+            
+            # Prepara dados no formato esperado pelo registra_pedido.py
+            pedido_data = {
+                'nome': str(dados['nome']).strip(),
+                'fone': str(dados['fone']).strip(),
+                'id_Prod': int(dados['id_Prod']),
+                'qtd': float(dados['qtd']),
+                'observ': str(dados.get('observ', '')).strip(),
+                'data': datetime.now().strftime('%Y-%m-%d'),
+                'hora': datetime.now().strftime('%H:%M:%S')
+            }
+            
+            # Converte para JSON string
+            pedido_json = json.dumps(pedido_data, ensure_ascii=False)
+            
+            print(f"📝 Criando pedido para: {pedido_data['nome']} - Fone: {pedido_data['fone']}")
+            print(f"🍔 Produto ID: {pedido_data['id_Prod']} - Qtd: {pedido_data['qtd']}")
+            
+            # Usa o registra_pedido.py para processar
+            resultado = processar_json(pedido_json)
+            
+            if resultado and resultado.get('sucesso'):
+                print(f"✅ {resultado.get('mensagem')}")
+                return {
+                    'sucesso': True,
+                    'mensagem': resultado.get('mensagem'),
+                    'pedido_processado': pedido_data,
+                    'total_itens': len(resultado.get('pedidos', []))
+                }
+            else:
+                erro_msg = resultado.get('mensagem', 'Erro desconhecido') if resultado else 'Falha no processamento'
+                print(f"❌ Erro ao criar pedido: {erro_msg}")
+                return None
+                
+        except ValueError as e:
+            print(f"❌ Erro de validação: {e}")
+            return None
+        except Exception as e:
+            print(f"❌ Erro inesperado ao criar pedido: {e}")
+            return None
+
+    def criar_pedido_completo(self, dados_json: str) -> Optional[Dict]:
+        """
+        Cria pedido(s) usando JSON string diretamente com registra_pedido.py
+        
+        Args:
+            dados_json: String JSON com pedido(s) no formato completo
+            
+        Returns:
+            Resultado do processamento
+        """
+        try:
+            print("📦 Processando pedido(s) via registra_pedido.py...")
+            resultado = processar_json(dados_json)
+            
+            if resultado and resultado.get('sucesso'):
+                print(f"✅ {resultado.get('mensagem')}")
+            else:
+                erro_msg = resultado.get('mensagem', 'Erro desconhecido') if resultado else 'Falha no processamento'
+                print(f"❌ {erro_msg}")
+                
+            return resultado
+            
+        except Exception as e:
+            print(f"❌ Erro ao processar pedido completo: {e}")
             return None
 
     def buscar_por_fone(self, fone: str) -> List[Dict]:
@@ -280,7 +349,8 @@ def menu_interativo():
     print("7. Exibir estatísticas")
     print("8. Exportar para CSV")
     print("9. Exportar para JSON")
-    print("10. Criar novo pedido")
+    print("10. Criar novo pedido (simples)")
+    print("11. Criar pedido completo (JSON)")
     print("0. Sair")
     print("=" * 80)
 
@@ -364,21 +434,69 @@ def main():
                 manager.exportar_json(pedidos_cache, filename or 'pedidos.json')
             
             elif opcao == '10':
-                print("\n📝 Criar novo pedido:")
+                print("\n📝 Criar novo pedido (simples):")
                 try:
                     dados = {
                         'nome': input("Nome do cliente: ").strip(),
                         'fone': input("Telefone: ").strip(),
                         'id_Prod': int(input("ID do produto: ").strip()),
                         'qtd': float(input("Quantidade: ").strip()),
-                        'observ': input("Observação: ").strip() or 'Normal'
+                        'observ': input("Observação (opcional): ").strip() or ''
                     }
+                    
+                    print("\n⏳ Processando pedido...")
                     pedido_criado = api.criar_pedido(dados)
-                    if pedido_criado:
-                        print(f"✅ Pedido criado com sucesso! ID: {pedido_criado.get('id')}")
+                    if pedido_criado and pedido_criado.get('sucesso'):
+                        print(f"✅ Pedido processado com sucesso!")
+                        print(f"📋 {pedido_criado.get('mensagem')}")
                         pedidos_cache = None  # Invalida cache
-                except ValueError:
-                    print("❌ Dados inválidos")
+                    else:
+                        print("❌ Falha ao criar pedido")
+                        
+                except ValueError as e:
+                    print(f"❌ Dados inválidos: {e}")
+                except Exception as e:
+                    print(f"❌ Erro inesperado: {e}")
+            
+            elif opcao == '11':
+                print("\n📦 Criar pedido completo (JSON):")
+                print("💡 Você pode fornecer um pedido único ou múltiplos pedidos")
+                print("📋 Formato esperado:")
+                print("""   {
+     "nome": "João Silva",
+     "fone": "48999887766", 
+     "id_Prod": 123,
+     "qtd": 2,
+     "data": "2025-10-27",
+     "hora": "14:30",
+     "observ": "Sem cebola"
+   }""")
+                print("\n📝 Cole o JSON do pedido (ou pressione Enter para exemplo):")
+                
+                json_input = input().strip()
+                
+                if not json_input:
+                    # Exemplo para teste
+                    json_input = """{
+    "nome": "Cliente Teste",
+    "fone": "48999887766",
+    "id_Prod": 1,
+    "qtd": 1,
+    "observ": "Pedido de teste"
+}"""
+                    print(f"📋 Usando exemplo: {json_input}")
+                
+                try:
+                    print("\n⏳ Processando pedido completo...")
+                    resultado = api.criar_pedido_completo(json_input)
+                    if resultado and resultado.get('sucesso'):
+                        print("✅ Pedido(s) processado(s) com sucesso!")
+                        pedidos_cache = None  # Invalida cache
+                    else:
+                        print("❌ Falha ao processar pedido")
+                        
+                except Exception as e:
+                    print(f"❌ Erro ao processar JSON: {e}")
             
             else:
                 print("❌ Opção inválida")
