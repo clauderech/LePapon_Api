@@ -77,7 +77,7 @@ def retry_on_failure(max_retries: int = 3, delay: float = 1.0):
     return decorator
 
 # Constantes
-API_BASE_URL = "https://lepapon.api"  # URL base da API (HTTPS para segurança)
+API_BASE_URL = "http://lepapon.api"  # URL base da API (HTTP para desenvolvimento)
 ID_CLIENTE_SEM_CADASTRO = 13  # ID usado quando o cliente não possui cadastro no sistema
 DELAY_NUM_PEDIDO = 3.0  # segundos
 DELAY_ORDER_PEDIDO = 2.0  # segundos  
@@ -152,9 +152,64 @@ def _sanitizar_string(value: Any) -> str:
     return value.strip()
 
 
+def _converter_e_validar_campo(campo: str, valor: Any) -> tuple:
+    """
+    Converte e valida um campo específico do pedido
+    
+    Args:
+        campo: Nome do campo
+        valor: Valor a ser validado/convertido
+        
+    Returns:
+        Tupla (é_válido, valor_convertido)
+    """
+    try:
+        if campo == 'nome':
+            if not valor or not str(valor).strip():
+                return False, None
+            return True, str(valor).strip()
+            
+        elif campo == 'fone':
+            if not valor or not str(valor).strip():
+                return False, None
+            return True, str(valor).strip()
+            
+        elif campo == 'id_Prod':
+            # Aceita int, str que pode ser convertida para int
+            if isinstance(valor, int):
+                return valor > 0, valor
+            elif isinstance(valor, str) and valor.strip().isdigit():
+                convertido = int(valor.strip())
+                return convertido > 0, convertido
+            elif isinstance(valor, float) and valor.is_integer():
+                convertido = int(valor)
+                return convertido > 0, convertido
+            else:
+                return False, None
+                
+        elif campo == 'qtd':
+            # Aceita int, float, str que pode ser convertida para float
+            if isinstance(valor, (int, float)):
+                return valor > 0, float(valor)
+            elif isinstance(valor, str) and valor.strip():
+                try:
+                    convertido = float(valor.strip())
+                    return convertido > 0, convertido
+                except ValueError:
+                    return False, None
+            else:
+                return False, None
+                
+    except Exception as e:
+        logger.debug(f"Erro na conversão do campo {campo}: {str(e)}")
+        return False, None
+    
+    return False, None
+
+
 def _validar_dados_pedido(pedido: Dict[str, Any]) -> bool:
     """
-    Valida se um pedido contém os campos obrigatórios com validação de tipos.
+    Valida se um pedido contém os campos obrigatórios com validação e conversão flexível de tipos.
     
     Args:
         pedido: Dicionário com dados do pedido
@@ -166,34 +221,26 @@ def _validar_dados_pedido(pedido: Dict[str, Any]) -> bool:
         logger.error("Pedido deve ser um dicionário")
         return False
     
-    # Validação de campos obrigatórios e tipos
-    validacoes = {
-        'nome': (str, lambda x: len(x.strip()) > 0),
-        'fone': (str, lambda x: len(x.strip()) > 0),
-        'id_Prod': ((int, str), lambda x: str(x).isdigit()),
-        'qtd': ((int, float), lambda x: float(x) > 0)
-    }
+    campos_obrigatorios = ['nome', 'fone', 'id_Prod', 'qtd']
     
-    for campo, (tipos_validos, validador_adicional) in validacoes.items():
+    for campo in campos_obrigatorios:
         if campo not in pedido or pedido[campo] is None:
             logger.error(f"Campo obrigatório ausente ou nulo: {campo}")
             return False
         
         valor = pedido[campo]
+        logger.debug(f"Validando campo {campo}: {valor} (tipo: {type(valor)})")
         
-        # Validação de tipo
-        if not isinstance(valor, tipos_validos):
-            logger.error(f"Campo {campo} deve ser do tipo {tipos_validos}, recebido: {type(valor)}")
+        # Converte e valida o campo
+        is_valid, valor_convertido = _converter_e_validar_campo(campo, valor)
+        
+        if not is_valid:
+            logger.error(f"Valor inválido para campo {campo}: {valor} (tipo: {type(valor)})")
             return False
         
-        # Validação adicional
-        try:
-            if not validador_adicional(valor):
-                logger.error(f"Valor inválido para campo {campo}: {valor}")
-                return False
-        except Exception as e:
-            logger.error(f"Erro na validação do campo {campo}: {str(e)}")
-            return False
+        # Atualiza o valor no pedido com a versão convertida
+        pedido[campo] = valor_convertido
+        logger.debug(f"Campo {campo} convertido para: {valor_convertido} (tipo: {type(valor_convertido)})")
     
     return True
 
@@ -415,7 +462,7 @@ def processar_json(dados_json: str) -> Optional[Dict[str, Any]]:
         Retorna None se ocorrer um erro crítico.
     """
     logger.info("Iniciando processamento de pedidos JSON")
-    
+    print(dados_json)
     try:
         # Validação rigorosa do tipo de entrada
         if not isinstance(dados_json, str):

@@ -488,6 +488,7 @@ def main():
                 
                 try:
                     print("\n⏳ Processando pedido completo...")
+                    print(json_input)
                     resultado = api.criar_pedido_completo(json_input)
                     if resultado and resultado.get('sucesso'):
                         print("✅ Pedido(s) processado(s) com sucesso!")

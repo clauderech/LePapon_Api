@@ -36,6 +36,7 @@ class ClientesAPI:
     def get_by_fone(self, fone):
         """Busca clientes pelo número de telefone."""
         try:
+            print(f"{self.base_url}/api/clientes/fone/{fone}")
             response = requests.get(
                 f"{self.base_url}/api/clientes/fone/{fone}", 
                 timeout=self.timeout
