@@ -291,7 +291,7 @@ def crediario_view(page: ft.Page):
                 view_helper.mostrar_mensagem("Cliente não encontrado.", "red")
                 return
             
-            telefone = cliente.get('telefone', '')
+            telefone = cliente.get('fone', '')
             if not telefone:
                 view_helper.mostrar_mensagem("Cliente não possui telefone cadastrado.", "red")
                 return

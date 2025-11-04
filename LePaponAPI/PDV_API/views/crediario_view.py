@@ -381,254 +381,10 @@ def crediario_view(page: ft.Page):
     botao_pdf = ft.ElevatedButton("Exportar PDF", on_click=lambda e: exportar_pdf())
 
     # Variável para armazenar o caminho do arquivo selecionado
-    arquivo_selecionado = ft.Text("Nenhum arquivo selecionado", color="grey")
-    caminho_pdf_selecionado = None
-    
-    # Campo alternativo para digitar o caminho do arquivo
-    campo_caminho_arquivo = ft.TextField(
-        label="Ou digite o caminho do arquivo PDF",
-        width=400,
-        hint_text="/home/user/pasta/arquivo.pdf"
-    )
-    
-    def usar_caminho_digitado(e):
-        nonlocal caminho_pdf_selecionado
-        caminho = campo_caminho_arquivo.value
-        if caminho and os.path.exists(caminho) and caminho.lower().endswith('.pdf'):
-            caminho_pdf_selecionado = caminho
-            arquivo_selecionado.value = f"Arquivo: {os.path.basename(caminho)}"
-            arquivo_selecionado.color = "green"
-            msg.value = "Arquivo selecionado com sucesso!"
-            msg.color = "green"
-        else:
-            msg.value = "Caminho inválido ou arquivo não existe"
-            msg.color = "red"
-        msg.visible = True
-        page.update()
-    
-    botao_usar_caminho = ft.ElevatedButton("📂 Usar Caminho", on_click=usar_caminho_digitado)
-    
-    def listar_arquivos_cliente(e):
-        cliente_id = dropdown_clientes.value
-        if not cliente_id:
-            msg.value = "Selecione um cliente primeiro"
-            msg.color = "red"
-            msg.visible = True
-            page.update()
-            return
-            
-        cliente_nome = next((c.get('nome', '') + ' ' + c.get('sobrenome', '') for c in clientes if str(c.get('id', '')) == str(cliente_id)), f'cliente_{cliente_id}')
-        cliente_nome_pasta = re.sub(r'[^a-zA-Z0-9_\-]', '_', cliente_nome)
-        pasta_cliente = os.path.join(os.path.dirname(__file__), '../Crediario', cliente_nome_pasta)
-        
-        if os.path.exists(pasta_cliente):
-            arquivos_pdf = [f for f in os.listdir(pasta_cliente) if f.lower().endswith('.pdf')]
-            if arquivos_pdf:
-                # Cria botões para cada arquivo PDF
-                botoes_arquivos = []
-                for arquivo in sorted(arquivos_pdf):
-                    caminho_completo = os.path.join(pasta_cliente, arquivo)
-                    def criar_selecionar_arquivo(caminho_arq):
-                        return lambda e: selecionar_arquivo_especifico(caminho_arq)
-                    
-                    botao_arquivo = ft.ElevatedButton(
-                        text=f"📄 {arquivo}",
-                        on_click=criar_selecionar_arquivo(caminho_completo),
-                        width=400
-                    )
-                    botoes_arquivos.append(botao_arquivo)
-                
-                def fechar_modal(e):
-                    modal_arquivos.open = False
-                    page.update()
-                
-                # Mostra a lista de botões
-                modal_arquivos = ft.AlertDialog(
-                    modal=True,
-                    title=ft.Text(f"Selecionar PDF - {cliente_nome}"),
-                    content=ft.Column(
-                        controls=botoes_arquivos,
-                        height=300,
-                        scroll=ft.ScrollMode.AUTO
-                    ),
-                    actions=[
-                        ft.TextButton("Cancelar", on_click=fechar_modal)
-                    ]
-                )
-                
-                page.overlay.append(modal_arquivos)
-                modal_arquivos.open = True
-                page.update()
-            else:
-                msg.value = f"Nenhum arquivo PDF encontrado na pasta: {pasta_cliente}"
-                msg.color = "orange"
-                msg.visible = True
-                page.update()
-        else:
-            msg.value = f"Pasta do cliente não existe: {pasta_cliente}"
-            msg.color = "orange"
-            msg.visible = True
-            page.update()
-    
-    def selecionar_arquivo_especifico(caminho_arquivo):
-        nonlocal caminho_pdf_selecionado
-        caminho_pdf_selecionado = caminho_arquivo
-        arquivo_selecionado.value = f"Arquivo: {os.path.basename(caminho_arquivo)}"
-        arquivo_selecionado.color = "green"
-        campo_caminho_arquivo.value = caminho_arquivo  # Preenche o campo também
-        
-        # Fecha o modal (encontra e fecha qualquer AlertDialog aberto)
-        for overlay in page.overlay:
-            if isinstance(overlay, ft.AlertDialog) and overlay.open:
-                overlay.open = False
-                break
-        
-        msg.value = f"Arquivo selecionado: {os.path.basename(caminho_arquivo)}"
-        msg.color = "green"
-        msg.visible = True
-        page.update()
-    
-    botao_listar_arquivos = ft.ElevatedButton("📋 Navegar PDFs", on_click=listar_arquivos_cliente)
-    
-    def navegar_pasta_completa(e):
-        """Navegador de arquivos completo para qualquer pasta"""
-        def navegar_para_pasta(pasta_atual):
-            try:
-                itens = []
-                
-                # Adiciona botão para voltar (exceto se estiver na raiz)
-                if pasta_atual != '/':
-                    pasta_pai = os.path.dirname(pasta_atual)
-                    botao_voltar = ft.ElevatedButton(
-                        text="📁 .. (Voltar)",
-                        on_click=lambda e: navegar_para_pasta(pasta_pai),
-                        width=400
-                    )
-                    itens.append(botao_voltar)
-                
-                # Lista diretórios e arquivos
-                conteudo = os.listdir(pasta_atual)
-                
-                # Primeiro, adiciona diretórios
-                for item in sorted(conteudo):
-                    caminho_completo = os.path.join(pasta_atual, item)
-                    if os.path.isdir(caminho_completo):
-                        botao_pasta = ft.ElevatedButton(
-                            text=f"📁 {item}/",
-                            on_click=lambda e, p=caminho_completo: navegar_para_pasta(p),
-                            width=400
-                        )
-                        itens.append(botao_pasta)
-                
-                # Depois, adiciona arquivos PDF
-                for item in sorted(conteudo):
-                    caminho_completo = os.path.join(pasta_atual, item)
-                    if os.path.isfile(caminho_completo) and item.lower().endswith('.pdf'):
-                        botao_arquivo = ft.ElevatedButton(
-                            text=f"📄 {item}",
-                            on_click=lambda e, p=caminho_completo: selecionar_arquivo_especifico(p),
-                            width=400
-                        )
-                        itens.append(botao_arquivo)
-                
-                def fechar_navegador(e):
-                    for overlay in page.overlay:
-                        if isinstance(overlay, ft.AlertDialog) and overlay.open:
-                            overlay.open = False
-                            break
-                    page.update()
-                
-                # Cria o modal com a lista
-                modal_navegador = ft.AlertDialog(
-                    modal=True,
-                    title=ft.Text(f"Navegar: {pasta_atual}"),
-                    content=ft.Column(
-                        controls=itens if itens else [ft.Text("Pasta vazia")],
-                        height=400,
-                        scroll=ft.ScrollMode.AUTO,
-                        width=450
-                    ),
-                    actions=[
-                        ft.TextButton("Cancelar", on_click=fechar_navegador)
-                    ]
-                )
-                
-                # Remove modal anterior se existir
-                for overlay in page.overlay[:]:
-                    if isinstance(overlay, ft.AlertDialog):
-                        page.overlay.remove(overlay)
-                
-                page.overlay.append(modal_navegador)
-                modal_navegador.open = True
-                page.update()
-                
-            except PermissionError:
-                msg.value = f"Sem permissão para acessar: {pasta_atual}"
-                msg.color = "red"
-                msg.visible = True
-                page.update()
-            except Exception as ex:
-                msg.value = f"Erro ao navegar: {ex}"
-                msg.color = "red"
-                msg.visible = True
-                page.update()
-        
-        # Inicia na pasta Crediario
-        pasta_inicial = os.path.join(os.path.dirname(__file__), '../Crediario')
-        navegar_para_pasta(pasta_inicial)
-    
-    botao_navegar_completo = ft.ElevatedButton("🗂️ Navegar Pastas", on_click=navegar_pasta_completa)
 
-    def on_file_picker_result(e):
-        nonlocal caminho_pdf_selecionado
-        print(f"FilePicker result: {e.files}")  # Debug
-        if e.files:
-            caminho_pdf_selecionado = e.files[0].path
-            arquivo_selecionado.value = f"Arquivo: {os.path.basename(caminho_pdf_selecionado)}"
-            arquivo_selecionado.color = "green"
-            print(f"Arquivo selecionado: {caminho_pdf_selecionado}")  # Debug
-        else:
-            caminho_pdf_selecionado = None
-            arquivo_selecionado.value = "Nenhum arquivo selecionado"
-            arquivo_selecionado.color = "grey"
-            print("Nenhum arquivo foi selecionado")  # Debug
-        page.update()
 
-    # Criação do FilePicker - deve estar no overlay ANTES de usar
-    file_picker = ft.FilePicker(on_result=on_file_picker_result)
-    page.overlay.append(file_picker)
-    page.update()  # Força atualização para garantir que o FilePicker seja adicionado
-    
-    def selecionar_arquivo_pdf(e):
-        print("Botão de seleção clicado!")  # Debug
-        print(f"FilePicker no overlay: {file_picker in page.overlay}")  # Debug
-        print(f"Número de overlays: {len(page.overlay)}")  # Debug
-        print(f"Plataforma: {page.platform}")  # Debug
-        
-        try:
-            # Teste simples primeiro
-            result = file_picker.pick_files(
-                dialog_title="Selecionar PDF",
-                allowed_extensions=["pdf"],
-                allow_multiple=False
-            )
-            print(f"Resultado imediato: {result}")  # Debug
-            print("FilePicker.pick_files() chamado com sucesso!")  # Debug
-            
-            # Tenta forçar atualização
-            page.update()
-            
-        except Exception as ex:
-            print(f"Erro ao chamar FilePicker: {ex}")  # Debug
-            import traceback
-            traceback.print_exc()
-            msg.value = f"Erro ao abrir seletor de arquivos: {ex}"
-            msg.color = "red"
-            msg.visible = True
-            page.update()
 
     def enviar_conta_cliente(e):
-        nonlocal caminho_pdf_selecionado
         print("Enviando conta para o cliente...")
         try:
             cliente_id = dropdown_clientes.value
@@ -639,46 +395,56 @@ def crediario_view(page: ft.Page):
                 page.update()
                 return
             
-            if not caminho_pdf_selecionado:
-                msg.value = "Selecione um arquivo PDF primeiro."
-                msg.color = "red"
-                msg.visible = True
-                page.update()
-                return
-            
-            # Verifica se o arquivo ainda existe
-            if not os.path.exists(caminho_pdf_selecionado):
-                msg.value = "O arquivo selecionado não existe mais."
-                msg.color = "red"
-                msg.visible = True
-                page.update()
-                return
-            
             # Nome do cliente e nome do arquivo
             cliente_nome = next((c.get('nome', '') + ' ' + c.get('sobrenome', '') for c in clientes if str(c.get('id', '')) == str(cliente_id)), f'cliente_{cliente_id}')
             cliente_nome_pasta = re.sub(r'[^a-zA-Z0-9_\-]', '_', cliente_nome)
             
-            # Usa o nome do arquivo selecionado
-            nome_arquivo_pdf = os.path.basename(caminho_pdf_selecionado)
-            data_pdf = datetime.datetime.now().strftime('%Y-%m-%d')
+            # Procura pelo PDF mais recente na pasta do cliente
+            pasta_cliente = os.path.join(os.path.dirname(__file__), '../Crediario', cliente_nome_pasta)
+            
+            if not os.path.exists(pasta_cliente):
+                msg.value = f"Pasta do cliente não encontrada: {pasta_cliente}"
+                msg.color = "red"
+                msg.visible = True
+                page.update()
+                return
+            
+            # Lista todos os PDFs na pasta e pega o mais recente
+            arquivos_pdf = [f for f in os.listdir(pasta_cliente) if f.lower().endswith('.pdf')]
+            if not arquivos_pdf:
+                msg.value = "Nenhum PDF encontrado na pasta do cliente. Gere um PDF primeiro."
+                msg.color = "red"
+                msg.visible = True
+                page.update()
+                return
+            
+            # Ordena por data de modificação e pega o mais recente
+            arquivos_pdf_com_data = [(f, os.path.getmtime(os.path.join(pasta_cliente, f))) for f in arquivos_pdf]
+            arquivos_pdf_com_data.sort(key=lambda x: x[1], reverse=True)
+            arquivo_mais_recente = arquivos_pdf_com_data[0][0]
+            caminho_pdf_completo = os.path.join(pasta_cliente, arquivo_mais_recente)
+            
+            data_pdf = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
             
             # Primeiro faz upload do arquivo para o servidor
             try:
-                uploader = EnviarContaCliente(token=GRAPH_API_TOKEN, phone_number_id="469403086249830")
+                uploader = EnviarContaCliente(token=GRAPH_API_TOKEN, phone_number_id="833713429825528")
                 # Parâmetros do droplet
                 host = "64.23.179.108"
                 usuario = "claus"
                 caminho_chave = "/home/claus/.ssh/id_rsa"
-                caminho_remoto = f"/var/www/lepapon.com.br/Android-LePapon-Pedidos/files/{nome_arquivo_pdf}"
+                nome_arquivo_servidor = f"{cliente_nome_pasta}_{data_pdf}.pdf"
+                caminho_remoto = f"/var/www/lepapon.com.br/Android-LePapon-Pedidos/files/{nome_arquivo_servidor}"
                 
-                # Upload do arquivo selecionado
-                uploader.upload_pdf_droplet(host, usuario, caminho_pdf_selecionado, caminho_remoto, caminho_chave)
+                # Upload do arquivo mais recente
+                uploader.upload_pdf_droplet(host, usuario, caminho_pdf_completo, caminho_remoto, caminho_chave)
                 
                 # URL pública do PDF
-                pdf_url = f"https://lepapon.com.br/api/pdf/{nome_arquivo_pdf}"
+                pdf_url = f"https://lepapon.com.br/api/pdf/{nome_arquivo_servidor}"
                 print(f"PDF enviado para o servidor: {pdf_url}")
-                # Número do cliente (ajuste para buscar do cadastro se necessário)
-                numero_cliente = '555491253180' #next((c.get('telefone', '') for c in clientes if str(c.get('id', '')) == str(cliente_id)), None)
+                
+                # Número do cliente
+                numero_cliente = next((c.get('fone', '') for c in clientes if str(c.get('id', '')) == str(cliente_id)), None)
                 if not numero_cliente:
                     msg.value = "Telefone do cliente não encontrado."
                     msg.color = "red"
@@ -687,16 +453,12 @@ def crediario_view(page: ft.Page):
                     return
                 
                 # Envia o PDF via WhatsApp
-                resposta = uploader.enviar_pdf(numero_cliente, pdf_url, nome_arquivo=nome_arquivo_pdf)
+                resposta = uploader.enviar_pdf(numero_cliente, pdf_url, nome_arquivo=nome_arquivo_servidor)
                 print(f"Resposta do envio: {resposta}")
                 
                 if resposta.get('messages'):
-                    msg.value = f"Conta enviada para o cliente via WhatsApp! Arquivo: {nome_arquivo_pdf}"
+                    msg.value = f"Conta enviada para o cliente via WhatsApp! Arquivo: {arquivo_mais_recente}"
                     msg.color = "green"
-                    # Limpa a seleção após envio bem-sucedido
-                    caminho_pdf_selecionado = None
-                    arquivo_selecionado.value = "Nenhum arquivo selecionado"
-                    arquivo_selecionado.color = "grey"
                 else:
                     msg.value = f"Falha ao enviar pelo WhatsApp: {resposta}"
                     msg.color = "orange"
@@ -713,10 +475,7 @@ def crediario_view(page: ft.Page):
             msg.visible = True
             page.update()
 
-    botao_selecionar_pdf = ft.ElevatedButton(
-        "📁 Selecionar PDF", 
-        on_click=selecionar_arquivo_pdf
-    )
+
     botao_enviar_conta = ft.ElevatedButton(
         "📤 Enviar conta para o cliente", 
         on_click=enviar_conta_cliente
@@ -900,9 +659,6 @@ def crediario_view(page: ft.Page):
         ]),
         ft.Row([
             botao_pdf,
-            botao_selecionar_pdf,
-            botao_listar_arquivos,
-            botao_navegar_completo,
             botao_enviar_conta
         ]),
         ft.Row([
@@ -910,13 +666,7 @@ def crediario_view(page: ft.Page):
             saldo_recebido,
             saldo_devedor
         ]),
-        ft.Row([
-            arquivo_selecionado
-        ]),
-        ft.Row([
-            campo_caminho_arquivo,
-            botao_usar_caminho
-        ]),
+
         ft.Row([
             novo_recebimento_valor,
             botao_adicionar_recebimento,

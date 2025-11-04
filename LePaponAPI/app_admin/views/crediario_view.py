@@ -292,7 +292,7 @@ def crediario_view(page: ft.Page):
                 c.drawString(110, height-60, "LePapon Lanches - Claudemir")
                 c.setFont("Helvetica", 10)
                 c.drawString(110, height-80, "Endereço: João Venâncio Girarde, nº 260")
-                c.drawString(110, height-95, "CNPJ: 33.794.253/0001-33   Fone: (55) 5499-2635135")
+                c.drawString(110, height-95, "CNPJ: 33.794.253/0001-33   Fone: (54) 99125-3180")
                 # Data do relatório
                 c.setFont("Helvetica", 10)
                 c.drawString(400, height-60, f"Data: {datetime.datetime.now().strftime('%d/%m/%Y')}")
@@ -376,7 +376,7 @@ def crediario_view(page: ft.Page):
             #data_pdf = '2025-06-15'
             pdf_url = "https://lepapon.com.br/api/pdf/"+ cliente_nome_pasta + '_' + data_pdf + ".pdf"
             # Número do cliente (ajuste para buscar do cadastro se necessário)
-            numero_cliente = '555491253180' #next((c.get('telefone', '') for c in clientes if str(c.get('id', '')) == str(cliente_id)), None)
+            numero_cliente = next((c.get('telefone', '') for c in clientes if str(c.get('id', '')) == str(cliente_id)), None)
             if not numero_cliente:
                 msg.value = "Telefone do cliente não encontrado."
                 msg.color = "red"
