@@ -295,7 +295,7 @@ def crediario_view(page: ft.Page):
                 c.drawString(110, height-60, "LePapon Lanches - Claudemir")
                 c.setFont("Helvetica", 10)
                 c.drawString(110, height-80, "Endereço: João Venâncio Girarde, nº 260")
-                c.drawString(110, height-95, "CNPJ: 33.794.253/0001-33   Fone: (55) 5499-2635135")
+                c.drawString(110, height-95, "CNPJ: 33.794.253/0001-33   Fone: (54) 99125-3180")
                 # Data do relatório
                 c.setFont("Helvetica", 10)
                 c.drawString(400, height-60, f"Data: {datetime.datetime.now().strftime('%d/%m/%Y')}")
@@ -623,7 +623,7 @@ def crediario_view(page: ft.Page):
     def limpar_pdfs_servidor(e):
         """Limpa todos os PDFs do servidor remoto"""
         try:
-            uploader = EnviarContaCliente(token=GRAPH_API_TOKEN, phone_number_id="469403086249830")
+            uploader = EnviarContaCliente(token=GRAPH_API_TOKEN, phone_number_id="833713429825528")
             host = "64.23.179.108"
             usuario = "claus"
             caminho_chave = "/home/claus/.ssh/id_rsa"

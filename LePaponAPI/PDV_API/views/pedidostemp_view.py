@@ -165,7 +165,7 @@ def pedidostemp_view(page: ft.Page):
             c.drawString(110, height-60, "LePapon Lanches - Claudemir")
             c.setFont("Helvetica", 10)
             c.drawString(110, height-80, "Endereço: João Venâncio Girarde, nº 260")
-            c.drawString(110, height-95, "CNPJ: 33.794.253/0001-33   Fone: (55) 5499-2635135")
+            c.drawString(110, height-95, "CNPJ: 33.794.253/0001-33   Fone: (54) 99125-3180")
             c.setFont("Helvetica", 10)
             c.drawString(400, height-60, f"Data: {datetime.datetime.now().strftime('%d/%m/%Y')}")
             c.setFont("Helvetica-Bold", 14)
@@ -207,7 +207,7 @@ def pedidostemp_view(page: ft.Page):
             estado_pdf['pdf_path'] = pdf_path or ""
             # Usa telefone do cliente ou padrão do ambiente
             telefone_cliente = normalizar_fone(cliente_telefone)
-            telefone_padrao = os.getenv('TELEFONE_PADRAO', '555491253180')
+            telefone_padrao = os.getenv('TELEFONE_PADRAO', '')
             estado_pdf['telefone'] = telefone_cliente if telefone_cliente else normalizar_fone(telefone_padrao)
             msg_pdf.value = f"PDF gerado em: {pdf_path}"
             msg_pdf.color = "green"
