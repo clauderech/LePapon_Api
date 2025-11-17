@@ -1,0 +1,41 @@
+Quando um usuário adota um nome de usuário, o número de telefone dele não será 
+incluído nos webhooks de mensagens em alguns casos. Em vez disso, o BSUID dele 
+será enviado em um novo campo `user_id`, e o número de telefone dele poderá ser 
+enviado como uma string vazia no campo `wa_id`, tanto em versões existentes 
+quanto em novas da API. 
+
+Embora os números de telefone ainda sejam compartilhados em alguns casos, 
+principalmente para interações com clientes existentes, é essencial que você 
+comece a ingerir BSUIDs o mais rápido possível para minimizar a perda de 
+qualquer contexto de conversa.
+
+Se você enviar mensagem/ligar para o número de telefone de um usuário do 
+WhatsApp, ou receber uma mensagem/ligação do número de telefone dele, 
+incluiremos o número de telefone dele nas respostas da API e nos webhooks de 
+mensagens por 30 dias a partir do momento do envio ou recebimento, 
+independentemente de o usuário ter ou não adotado um nome de usuário. 
+
+O envio/ligação ou recebimento de uma mensagem/ligação para ou do número de 
+telefone do usuário dentro desta janela redefinirá a janela de 30 dias.
+
+Pode haver situações em que você receba mensagens de clientes existentes fora 
+da janela de 30 dias que pareçam uma mensagem de um novo usuário, porque o 
+número de telefone deles não está no webhook de mensagens (`wa_id` é uma 
+string vazia). 
+
+Para garantir que você possa identificar os usuários que adotam nomes de 
+usuário e manter o contexto da conversa além de 30 dias, estamos desenvolvendo 
+um recurso que permitirá que você continue a receber o número de telefone de 
+um usuário mesmo depois que ele tenha adotado um nome de usuário, desde que 
+você tenha enviado mensagens para o número de telefone do usuário no passado. 
+
+O histórico de comunicação será registrado a partir da adesão ao recurso. 
+Forneceremos detalhes sobre o processo de adesão e prazos assim que estiverem 
+disponíveis.
+
+Se um usuário não tiver adotado um nome de usuário, os webhooks de mensagens 
+incluirão tanto o número de telefone dele quanto o BSUID dele.
+
+Você pode enviar mensagens aos usuários usando o BSUID ou o número de telefone 
+deles assim que os BSUIDs começarem a aparecer nas respostas da API e nos 
+payloads do webhook.
