@@ -1,0 +1,185 @@
+ICYMI IA: As últimas tendências de IA, entregues na sua caixa de entrada
+
+════════════════════════════════════════════════════════════════════════
+
+Tendência em Destaque: Redes sociais de IA
+
+════════════════════════════════════════════════════════════════════════
+
+Em março de 2023, uma foto do Papa Francisco com um casaco branco e 
+volumoso viralizou nas redes sociais antes que qualquer pessoa percebesse 
+que não era real — foi gerada por IA. Aquele momento, produzido pela 
+Midjourney, foi um vislumbre do futuro. Avançando para 2025, a imagem 
+gerada por IA não apenas avançou, mas também deu origem a plataformas 
+sociais inteiramente novas.
+
+O Sora 2 da OpenAI, que foi lançado em 30 de setembro como um aplicativo 
+iOS apenas por convite nos EUA e Canadá, agora se expandiu para Android 
+em sete países. Ao abrir o aplicativo pela primeira vez, você é recebido 
+com um aviso de conteúdo: "Você está prestes a entrar em um mundo criativo 
+de conteúdo gerado por IA. Alguns vídeos podem retratar pessoas que você 
+reconhece, mas as ações e eventos mostrados não são reais." Ao passar esse 
+aviso, você encontrará uma rede social completamente formada, com contas 
+sugeridas que ostentam dezenas de milhares de seguidores e vídeos de 
+hamsters fazendo remada com barra.
+
+A Meta lançou sua própria plataforma de vídeo por IA, Vibes, em 25 de 
+setembro, dentro do aplicativo Meta AI (disponível para iOS e Android nos 
+EUA, Reino Unido e agora na Europa). Seu feed no estilo TikTok apresenta 
+de tudo, desde gatinhos andando de motocicleta pelas ruas da cidade a 
+crianças montando dinossauros fotorrealistas — tudo inteiramente sintético. 
+Embora inicialmente descartadas como "conteúdo de IA de baixa qualidade", 
+ambas as plataformas estão observando um engajamento real dos usuários, com 
+criadores dedicando horas à geração, remixagem e compartilhamento de 
+conteúdo de IA, adicionando uma nova dimensão à economia da atenção.
+
+O otimista vê a criatividade democratizada; qualquer pessoa pode agora ser 
+um criador de vídeo. Mas perguntas críticas pairam: Como distinguimos o 
+real do sintético? O que acontece quando nossos feeds se tornam fluxos 
+infinitos de conteúdo gerado por máquinas? E quem está definindo as 
+salvaguardas neste admirável mundo novo onde ver já não é mais acreditar? 
+Quaisquer que sejam as respostas, a mudança é inegável: as redes sociais 
+de IA passaram de momentos virais para uma experiência incorporada.
+
+
+════════════════════════════════════════════════════════════════════════
+
+Relatórios de tendências de IA e comentários da indústria
+
+════════════════════════════════════════════════════════════════════════
+
+• Navegadores agênticos como o ChatGPT Atlas permitem que a IA navegue 
+  autonomamente em sites e complete tarefas multi-etapas, mas as primeiras 
+  versões foram propensas a problemas de segurança. A Futurism reporta que 
+  o "modo agente" do navegador é vulnerável a ataques de injeção de prompt 
+  que permitem que atores maliciosos injetem comandos prejudiciais. A Meta 
+  compartilhou diretrizes para desenvolvedores construírem agentes de IA 
+  mais seguros, incluindo a "Regra dos Dois Agentes" para proteção contra 
+  exploração.
+
+• O Wall Street Journal reporta que, enquanto a OpenAI busca consumidores 
+  do mercado de massa com 800 milhões de usuários semanais, a Anthropic 
+  construiu um modelo de negócio mais lucrativo ao focar em clientes 
+  corporativos, que representam 80% de sua receita e geram 8 vezes mais 
+  receita por usuário. A Anthropic conquistou a liderança na participação 
+  de mercado no uso de IA corporativa (32% vs 25% da OpenAI) e 
+  especificamente em codificação (42% vs 21%).
+
+• O Índice de Trabalho Remoto, publicado pela Scale AI e pelo Center for 
+  AI Safety, descobriu que mesmo os principais sistemas de IA completam 
+  menos de 3% das tarefas dentro dos padrões profissionais humanos quando 
+  testados em 240 projetos freelance reais em 23 categorias de trabalho. 
+  Isso afirma a necessidade de supervisão contínua com "human-in-the-loop" 
+  (envolvimento humano), especialmente ao gerenciar tarefas intrincadas e 
+  multifacetadas.
+
+
+════════════════════════════════════════════════════════════════════════
+
+Modelos de IA em nosso radar
+
+════════════════════════════════════════════════════════════════════════
+
+• Conjunto de modelos Emu 3.5:
+  Este conjunto de modelos foi projetado para gerar guias passo a passo e 
+  narrativas para alcançar qualquer coisa. O modelo aceita naturalmente 
+  entradas de visão-linguagem intercaladas e gera saídas de visão-linguagem 
+  intercaladas. Ele também se destaca como um modelo de geração e edição de 
+  imagens.
+
+• MiniMax M2:
+  Um modelo Mini construído para codificação intensa e fluxos de trabalho 
+  agênticos, o MiniMax-M2 redefine a eficiência para agentes. É um modelo 
+  MoE compacto, rápido e econômico (230 bilhões de parâmetros totais com 
+  10 bilhões de parâmetros ativos) construído para um desempenho de elite 
+  em codificação e tarefas agênticas, tudo isso enquanto mantém uma 
+  inteligência geral poderosa.
+
+• DeepSeek OCR:
+  O mais recente Estado da Arte em Reconhecimento de Conteúdo de Objeto. 
+  O DeepSeek OCR é uma investigação sobre a viabilidade de comprimir 
+  contextos longos via mapeamento óptico 2D. DeepSeek-OCR consiste em dois 
+  componentes: DeepEncoder e DeepSeek3B-MoE-A570M como decodificador. Com o 
+  DeepEncoder servindo como motor principal, este pipeline é projetado para 
+  manter baixas ativações sob entrada de alta resolução, enquanto alcança 
+  altas taxas de compressão para garantir um número ótimo e gerenciável de 
+  tokens de visão.
+
+
+════════════════════════════════════════════════════════════════════════
+
+Tutoriais e recursos da comunidade
+
+════════════════════════════════════════════════════════════════════════
+
+• Transforme imagens 2D em ativos 3D usando Hunyuan3D 2.1 em DigitalOcean 
+  GPU Droplets (requerendo pelo menos 40GB de VRAM), que gera malhas 
+  texturizadas com etapas separadas de síntese de forma e textura através 
+  de uma interface web Gradio.
+
+• Implante o LongCat Video da Meituan — uma alternativa de código aberto ao 
+  Sora 2, capaz de transformar texto em vídeo, imagem em vídeo e continuar 
+  vídeos — em DigitalOcean GPU Droplets (requerendo pelo menos 80GB de 
+  VRAM) usando uma interface Streamlit para geração.
+
+• Aprenda a processar documentos de forma mais eficiente com DeepSeek-OCR, 
+  que utiliza compressão de contexto óptico para reduzir a contagem de 
+  tokens em 7-20x enquanto mantém cerca de 97% de precisão de OCR através 
+  de sua arquitetura DeepEncoder e DeepSeek-3B-MoE.
+
+• Descubra 14 YouTubers de IA educativos — incluindo Andrew Ng, Tina Huang 
+  e Dwarkesh Patel — que tornam o aprendizado de máquina acessível através 
+  de análises de pesquisas, tutoriais práticos, orientação de carreira e 
+  aplicações no mundo real.
+
+• Compare Grok vs ChatGPT — desde a integração de dados X ao vivo do Grok 
+  e o modo DeepSearch para pesquisa em tempo real, até o assistente de 
+  codificação Codex do ChatGPT e integrações com um clique com Google 
+  Workspace, GitHub e plataformas corporativas.
+
+
+════════════════════════════════════════════════════════════════════════
+
+Tutoriais em vídeo
+
+════════════════════════════════════════════════════════════════════════
+
+AUTENTIQUE USUÁRIOS DO N8N DE FORMA SEGURA COM LINKS MÁGICOS
+────────────────────────────────────────────────────────────────────────
+Construa uma autenticação segura por links mágicos no n8n usando uma 
+arquitetura de dois fluxos de trabalho com validação de token Postgres, 
+verificações de segurança de três pontos (token existe, não expirou, não 
+foi usado) e autenticação de cabeçalho para proteger o webhook de currículo 
+contra ataques de spoofing.
+
+
+COMO IMPLEMENTAR APLICATIVOS STREAMLIT NA PLATAFORMA DE APLICATIVOS DO
+────────────────────────────────────────────────────────────────────────
+Aprenda a construir um aplicativo Python Streamlit que usa modelos 
+serverless da plataforma Gradient AI e a implementá-lo na Plataforma de 
+Aplicativos da DO via GitHub, com configurações corretas de porta, 
+variáveis de ambiente seguras e uma demonstração de geração de imagem e 
+texto para fala.
+
+
+COMO EXECUTAR MODELOS FAL.AI NA DIGITALOCEAN
+────────────────────────────────────────────────────────────────────────
+Execute modelos de geração de imagem e áudio Fal.ai em Python através de 
+um aplicativo Streamlit usando a plataforma Gradient AI da DigitalOcean, 
+com uma única chave de API permitindo acesso a vários provedores de modelos 
+e opções de implantação simples.
+
+
+════════════════════════════════════════════════════════════════════════
+
+Atualizações de produto
+
+════════════════════════════════════════════════════════════════════════
+
+CONSTRUA BASES DE CONHECIMENTO MAIS INTELIGENTES COM SUPORTE A SITEMAP
+────────────────────────────────────────────────────────────────────────
+Agora você pode adicionar uma URL de sitemap (no formato .xml) para 
+rastrear uma lista específica de páginas de uma só vez, em vez de adicionar 
+URLs individualmente. Basta inserir seu sitemap (por exemplo, 
+docs.digitalocean.com/sitemap.xml) e, opcionalmente, incluir links de 
+cabeçalho e rodapé ou mídia incorporada para uma indexação mais completa.

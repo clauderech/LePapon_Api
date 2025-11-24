@@ -14,8 +14,8 @@ fi
 
 # 2. Executa o script Python
 # ATENÇÃO: Substitua /caminho/para/seu/script/tradutor_gemini.py pelo caminho real
-TRADUCAO=$(/home/claus/Projetos/Python/.venv/bin/python ./translater_pt-br.py "$TEXTO_SELECIONADO")
+TRADUCAO=$(/home/claus/Projetos/Python/LePapon_Api/.venv/bin/python LePaponAPI/Tradutor/translater_pt-br.py "$TEXTO_SELECIONADO")
 
-echo "$TRADUCAO" > ./traducao_gemini.txt
+echo "$TRADUCAO" > LePaponAPI/Tradutor/traducao_gemini.txt
 # 3. Exibe o resultado como uma notificação pop-up
 notify-send "Tradução Gemini (Feita por Você)" "$TRADUCAO"
