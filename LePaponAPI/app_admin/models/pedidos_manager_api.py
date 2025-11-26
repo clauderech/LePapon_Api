@@ -122,4 +122,17 @@ class PedidosManager:
                     print(f"Erro ao transferir pedido {pedido.get('id_pedidos')}: {resp.status_code}, {resp.text}")
         return crediarios_criados
 
+    def atualizar_data_ontem(self):
+        """
+        Atualiza a data de todos os pedidos temporários para ontem.
+        Utiliza o endpoint PATCH /api/pedidos/update-data-yesterday.
+        """
+        url = f"{self.base_url}/api/pedidos/update-data-yesterday"
+        resp = requests.patch(url)
+        if resp.status_code == 200 or resp.status_code == 204:
+            return resp.json() if resp.content else {"message": "Data atualizada para ontem com sucesso"}
+        else:
+            raise Exception(f"Erro ao atualizar data: {resp.status_code} - {resp.text}")
+
+
 

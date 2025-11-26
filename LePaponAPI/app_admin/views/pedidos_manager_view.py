@@ -232,6 +232,20 @@ def pedidos_manager_view(page: ft.Page):
             msg.visible = True
             page.update()
 
+    def atualizar_data_ontem(e):
+        show_loading("Atualizando data dos pedidos para ontem...")
+        try:
+            result = pedidos_manager.atualizar_data_ontem()
+            msg.value = "Data de todos os pedidos atualizada para ontem com sucesso."
+            msg.color = "green"
+            msg.visible = True
+            listar_pedidos(None)
+        except Exception as ex:
+            msg.value = f"Erro ao atualizar data: {ex}"
+            msg.color = "red"
+            msg.visible = True
+            page.update()
+
     
 
     lista_pedidos = ft.Column([], scroll=ft.ScrollMode.AUTO, expand=False, height=700, width=800)
@@ -241,6 +255,7 @@ def pedidos_manager_view(page: ft.Page):
         ft.Text("Gerenciar Pedidos Temporários", style=ft.TextThemeStyle.HEADLINE_SMALL),
         ft.Row([
             ft.ElevatedButton("Listar Pedidos", on_click=listar_pedidos),
+            ft.ElevatedButton("Atualizar Data para Ontem", on_click=atualizar_data_ontem),
             ft.ElevatedButton("Transferir para Vendas", on_click=transferir_para_vendas),
             ft.ElevatedButton("Transferir para Crediário (não pagos)", on_click=transferir_para_crediario),
             ft.ElevatedButton("Deletar Todos", on_click=deletar_todos),
