@@ -1,77 +1,85 @@
-ICYMI IA: As últimas tendências de IA, entregues na sua caixa de entrada
+IA: As últimas tendências, entregues na sua caixa de entrada
 
 ════════════════════════════════════════════════════════════════════════
 
-Tendência em Destaque: Redes sociais de IA
+Observatório de Tendências: As estratégias dos 6% de elite da IA
 
 ════════════════════════════════════════════════════════════════════════
 
-Em março de 2023, uma foto do Papa Francisco com um casaco branco e 
-volumoso viralizou nas redes sociais antes que qualquer pessoa percebesse 
-que não era real — foi gerada por IA. Aquele momento, produzido pela 
-Midjourney, foi um vislumbre do futuro. Avançando para 2025, a imagem 
-gerada por IA não apenas avançou, mas também deu origem a plataformas 
-sociais inteiramente novas.
+Três anos após o início da era da IA generativa, quase todo mundo está 
+usando IA — mas quem está realmente obtendo sucesso com ela? A pesquisa 
+"State of AI 2025" da McKinsey revela uma realidade contundente: 88% das 
+organizações utilizam IA em pelo menos uma função de negócios, contudo, 
+apenas 6% se qualificam como "empresas de alto desempenho" — aquelas que 
+atribuem mais de 5% dos seus lucros antes de juros e impostos (EBIT) à IA 
+e reportam valor significativo.
 
-O Sora 2 da OpenAI, que foi lançado em 30 de setembro como um aplicativo 
-iOS apenas por convite nos EUA e Canadá, agora se expandiu para Android 
-em sete países. Ao abrir o aplicativo pela primeira vez, você é recebido 
-com um aviso de conteúdo: "Você está prestes a entrar em um mundo criativo 
-de conteúdo gerado por IA. Alguns vídeos podem retratar pessoas que você 
-reconhece, mas as ações e eventos mostrados não são reais." Ao passar esse 
-aviso, você encontrará uma rede social completamente formada, com contas 
-sugeridas que ostentam dezenas de milhares de seguidores e vídeos de 
-hamsters fazendo remada com barra.
+O que as diferencia? Não são apenas ferramentas melhores ou orçamentos 
+maiores. Os fatores de diferenciação são frequentemente contraintuitivos:
 
-A Meta lançou sua própria plataforma de vídeo por IA, Vibes, em 25 de 
-setembro, dentro do aplicativo Meta AI (disponível para iOS e Android nos 
-EUA, Reino Unido e agora na Europa). Seu feed no estilo TikTok apresenta 
-de tudo, desde gatinhos andando de motocicleta pelas ruas da cidade a 
-crianças montando dinossauros fotorrealistas — tudo inteiramente sintético. 
-Embora inicialmente descartadas como "conteúdo de IA de baixa qualidade", 
-ambas as plataformas estão observando um engajamento real dos usuários, com 
-criadores dedicando horas à geração, remixagem e compartilhamento de 
-conteúdo de IA, adicionando uma nova dimensão à economia da atenção.
+• Eles buscam objetivos maiores, não apenas melhores.
+  As empresas de alto desempenho são 3,6 vezes mais propensas a buscar 
+  "mudanças transformadoras" em vez de eficiência incremental. Enquanto 
+  80% de todas as empresas definem a redução de custos como um objetivo de 
+  IA, as de alto desempenho também estabelecem objetivos de crescimento 
+  (82% vs 50%) e inovação (79% vs 50%).
 
-O otimista vê a criatividade democratizada; qualquer pessoa pode agora ser 
-um criador de vídeo. Mas perguntas críticas pairam: Como distinguimos o 
-real do sintético? O que acontece quando nossos feeds se tornam fluxos 
-infinitos de conteúdo gerado por máquinas? E quem está definindo as 
-salvaguardas neste admirável mundo novo onde ver já não é mais acreditar? 
-Quaisquer que sejam as respostas, a mudança é inegável: as redes sociais 
-de IA passaram de momentos virais para uma experiência incorporada.
+• Eles sabem quando não confiar na IA.
+  Um dos mais fortes preditores de sucesso? Ter processos definidos para 
+  quando as saídas do modelo precisam de validação humana. Sessenta e cinco 
+  por cento das empresas de alto desempenho têm isso implementado, contra 
+  apenas 23% das outras. Os vencedores não estão removendo humanos – estão 
+  os utilizando estrategicamente.
+
+• Eles redesenham o trabalho, não apenas as ferramentas.
+  As empresas de alto desempenho são 2,8 vezes mais propensas a ter 
+  redesenhado fundamentalmente os fluxos de trabalho em torno da IA (55% 
+  vs. 20%). Todos os outros estão anexando a IA a processos falhos e se 
+  perguntando por que não está funcionando.
+
+• Eles falham mais e aprendem com isso.
+  As empresas de alto desempenho, na verdade, relatam mais consequências 
+  negativas do uso da IA, particularmente em relação à infração de PI e 
+  conformidade regulatória. Mas também estão mitigando mais riscos. A 
+  ambição cria exposição, e jogar pelo seguro significa que você nunca 
+  aprende o que pode dar errado.
+
+• A liderança não está delegando, está liderando.
+  As empresas de alto desempenho são 3 vezes mais propensas a concordar 
+  fortemente que líderes seniores demonstram verdadeiro senso de 
+  propriedade das iniciativas de IA (48% vs. 16%). Este não é um projeto 
+  de TI; é uma transformação da alta direção.
+
+• Eles já estão escalando agentes.
+  Enquanto a maioria das empresas ainda está experimentando agentes de IA, 
+  as de alto desempenho são 3-6 vezes mais propensas a ter atingido a fase 
+  de escalonamento em funções como TI, gestão de conhecimento e marketing.
+
+À medida que sua equipe define os orçamentos e iniciativas de 2026, o 
+manual de estratégias está se tornando claro: pare de tratar a IA como um 
+exercício de corte de custos ou um experimento de TI. Os 6% que 
+desvendaram isso estão buscando a transformação com fluxos de trabalho 
+redesenhados, supervisão humana estratégica e um compromisso executivo 
+genuíno. A diferença entre eles e todos os outros não é sorte ou tecnologia 
+proprietária — é a abordagem.
 
 
 ════════════════════════════════════════════════════════════════════════
 
-Relatórios de tendências de IA e comentários da indústria
+Anunciamos nosso Programa Ripple Writers
 
 ════════════════════════════════════════════════════════════════════════
 
-• Navegadores agênticos como o ChatGPT Atlas permitem que a IA navegue 
-  autonomamente em sites e complete tarefas multi-etapas, mas as primeiras 
-  versões foram propensas a problemas de segurança. A Futurism reporta que 
-  o "modo agente" do navegador é vulnerável a ataques de injeção de prompt 
-  que permitem que atores maliciosos injetem comandos prejudiciais. A Meta 
-  compartilhou diretrizes para desenvolvedores construírem agentes de IA 
-  mais seguros, incluindo a "Regra dos Dois Agentes" para proteção contra 
-  exploração.
+Está construindo fluxos de trabalho de IA/ML com DigitalOcean e escrevendo 
+sobre isso? Ripple Writers paga a profissionais técnicos para publicar 
+artigos sobre suas experiências reais de implementação — benchmark de GPU, 
+ajuste fino de modelos na Plataforma Gradient AI, implantações de ML em 
+produção, tudo o que você realmente está construindo. Publique em sua 
+própria plataforma, mantenha controle editorial total e seja pago por 
+conteúdo que demonstre como resolver problemas do mundo real para outros 
+desenvolvedores.
 
-• O Wall Street Journal reporta que, enquanto a OpenAI busca consumidores 
-  do mercado de massa com 800 milhões de usuários semanais, a Anthropic 
-  construiu um modelo de negócio mais lucrativo ao focar em clientes 
-  corporativos, que representam 80% de sua receita e geram 8 vezes mais 
-  receita por usuário. A Anthropic conquistou a liderança na participação 
-  de mercado no uso de IA corporativa (32% vs 25% da OpenAI) e 
-  especificamente em codificação (42% vs 21%).
-
-• O Índice de Trabalho Remoto, publicado pela Scale AI e pelo Center for 
-  AI Safety, descobriu que mesmo os principais sistemas de IA completam 
-  menos de 3% das tarefas dentro dos padrões profissionais humanos quando 
-  testados em 240 projetos freelance reais em 23 categorias de trabalho. 
-  Isso afirma a necessidade de supervisão contínua com "human-in-the-loop" 
-  (envolvimento humano), especialmente ao gerenciar tarefas intrincadas e 
-  multifacetadas.
+→ Envie sua proposta
 
 
 ════════════════════════════════════════════════════════════════════════
@@ -80,30 +88,30 @@ Modelos de IA em nosso radar
 
 ════════════════════════════════════════════════════════════════════════
 
-• Conjunto de modelos Emu 3.5:
-  Este conjunto de modelos foi projetado para gerar guias passo a passo e 
-  narrativas para alcançar qualquer coisa. O modelo aceita naturalmente 
-  entradas de visão-linguagem intercaladas e gera saídas de visão-linguagem 
-  intercaladas. Ele também se destaca como um modelo de geração e edição de 
-  imagens.
+• Kimi K2-Thinking:
+  A versão mais recente e capaz do modelo de raciocínio de código aberto da 
+  Kimi; este agente de raciocínio funciona passo a passo enquanto invoca 
+  ferramentas dinamicamente. Ele estabelece um novo estado da arte em 
+  Humanity's Last Exam (HLE), BrowseComp e outros benchmarks, escalando 
+  dramaticamente a profundidade do raciocínio multi-etapas e mantendo o uso 
+  estável de ferramentas em 200 a 300 chamadas sequenciais.
 
-• MiniMax M2:
-  Um modelo Mini construído para codificação intensa e fluxos de trabalho 
-  agênticos, o MiniMax-M2 redefine a eficiência para agentes. É um modelo 
-  MoE compacto, rápido e econômico (230 bilhões de parâmetros totais com 
-  10 bilhões de parâmetros ativos) construído para um desempenho de elite 
-  em codificação e tarefas agênticas, tudo isso enquanto mantém uma 
-  inteligência geral poderosa.
+• Maya1:
+  Um novo estado da arte para modelagem de texto para fala; com Maya1, você 
+  pode criar qualquer voz que imaginar, torná-la real com tags de emoção 
+  como riso ou choro, e fazer tudo isso transmitindo instantaneamente com o 
+  modelo de 3 bilhões de parâmetros rodando em uma única GPU.
 
-• DeepSeek OCR:
-  O mais recente Estado da Arte em Reconhecimento de Conteúdo de Objeto. 
-  O DeepSeek OCR é uma investigação sobre a viabilidade de comprimir 
-  contextos longos via mapeamento óptico 2D. DeepSeek-OCR consiste em dois 
-  componentes: DeepEncoder e DeepSeek3B-MoE-A570M como decodificador. Com o 
-  DeepEncoder servindo como motor principal, este pipeline é projetado para 
-  manter baixas ativações sob entrada de alta resolução, enquanto alcança 
-  altas taxas de compressão para garantir um número ótimo e gerenciável de 
-  tokens de visão.
+• ERNIE-4.5-VL-28B-A3B-Thinking:
+  Esta atualização do modelo Ernie 4.5 VL oferece melhorias substanciais em 
+  múltiplos benchmarks, atingindo um novo estado da arte para modelagem de 
+  linguagem de visão de código aberto.
+
+• DepthAnything v3:
+  A terceira iteração desta série de modelos da ByteDance Seed; o modelo v3 
+  prevê geometria espacialmente consistente a partir de entradas visuais 
+  arbitrárias, com ou sem poses de câmera conhecidas. Isso nos permite 
+  criar mapas de profundidade consistentes a partir de imagens únicas.
 
 
 ════════════════════════════════════════════════════════════════════════
@@ -112,30 +120,30 @@ Tutoriais e recursos da comunidade
 
 ════════════════════════════════════════════════════════════════════════
 
-• Transforme imagens 2D em ativos 3D usando Hunyuan3D 2.1 em DigitalOcean 
-  GPU Droplets (requerendo pelo menos 40GB de VRAM), que gera malhas 
-  texturizadas com etapas separadas de síntese de forma e textura através 
-  de uma interface web Gradio.
+• Leia nossa análise comparativa entre GitHub Copilot e Cursor para saber 
+  qual ferramenta se adapta às suas necessidades — seja a velocidade e 
+  integração com GitHub do Copilot ou o contexto de projeto e poder de 
+  edição multi-arquivo do Cursor.
 
-• Implante o LongCat Video da Meituan — uma alternativa de código aberto ao 
-  Sora 2, capaz de transformar texto em vídeo, imagem em vídeo e continuar 
-  vídeos — em DigitalOcean GPU Droplets (requerendo pelo menos 80GB de 
-  VRAM) usando uma interface Streamlit para geração.
+• Descubra qual aplicativo de idiomas com IA realmente o ajuda a aprender 
+  — se você precisa das lições gamificadas do Duolingo, da prática de 
+  conversação do TalkPal ou da estrutura direta do Babbel — com base em 
+  uma semana de testes reais.
 
-• Aprenda a processar documentos de forma mais eficiente com DeepSeek-OCR, 
-  que utiliza compressão de contexto óptico para reduzir a contagem de 
-  tokens em 7-20x enquanto mantém cerca de 97% de precisão de OCR através 
-  de sua arquitetura DeepEncoder e DeepSeek-3B-MoE.
+• Explore 10 alternativas ao DALL-E, incluindo Midjourney para arte 
+  cinematográfica e Adobe Firefly para fluxos de trabalho de design, além 
+  de outros 8 geradores que lidam com tudo, desde mockups de marca até 
+  criação de personagens.
 
-• Descubra 14 YouTubers de IA educativos — incluindo Andrew Ng, Tina Huang 
-  e Dwarkesh Patel — que tornam o aprendizado de máquina acessível através 
-  de análises de pesquisas, tutoriais práticos, orientação de carreira e 
-  aplicações no mundo real.
+• Veja como agentes de IA se comunicam em sistemas multiagente — desde 
+  performativos FIPA ACL como "informar" e "solicitar" até chamadas de 
+  ferramentas JSON-RPC e MCP (Model Context Protocol) que estruturam a 
+  coordenação de agentes LLM modernos.
 
-• Compare Grok vs ChatGPT — desde a integração de dados X ao vivo do Grok 
-  e o modo DeepSearch para pesquisa em tempo real, até o assistente de 
-  codificação Codex do ChatGPT e integrações com um clique com Google 
-  Workspace, GitHub e plataformas corporativas.
+• Aprenda como funciona o 'envenenamento' de LLMs — onde atacantes inserem 
+  apenas 250 documentos corrompidos em dados de treinamento para implantar 
+  gatilhos ocultos, enviesar saídas ou comprometer pipelines RAG, mesmo em 
+  modelos de 13 bilhões de parâmetros.
 
 
 ════════════════════════════════════════════════════════════════════════
@@ -144,42 +152,48 @@ Tutoriais em vídeo
 
 ════════════════════════════════════════════════════════════════════════
 
-AUTENTIQUE USUÁRIOS DO N8N DE FORMA SEGURA COM LINKS MÁGICOS
+COMO CONSTRUIR UMA BASE DE CONHECIMENTO COM ATUALIZAÇÃO AUTOMÁTICA
 ────────────────────────────────────────────────────────────────────────
-Construa uma autenticação segura por links mágicos no n8n usando uma 
-arquitetura de dois fluxos de trabalho com validação de token Postgres, 
-verificações de segurança de três pontos (token existe, não expirou, não 
-foi usado) e autenticação de cabeçalho para proteger o webhook de currículo 
-contra ataques de spoofing.
+Este vídeo aborda como criar uma Base de Conhecimento, adicionar o URL das 
+estatísticas da NBA a ela, configurar a reindexação diária automática, 
+anexá-la a um agente e personalizar esse agente com uma personalidade 
+distinta. Também mostra como usar o widget de chat integrado para o seu 
+frontend e implantar tudo na Plataforma de Aplicativos DigitalOcean. Ao 
+final, você verá como é fácil construir um agente que se mantém atualizado 
+sem nenhum trabalho adicional de sua parte.
 
 
-COMO IMPLEMENTAR APLICATIVOS STREAMLIT NA PLATAFORMA DE APLICATIVOS DO
+COMO O SIMA-2 DO GOOGLE SE AUTO-TREINA
 ────────────────────────────────────────────────────────────────────────
-Aprenda a construir um aplicativo Python Streamlit que usa modelos 
-serverless da plataforma Gradient AI e a implementá-lo na Plataforma de 
-Aplicativos da DO via GitHub, com configurações corretas de porta, 
-variáveis de ambiente seguras e uma demonstração de geração de imagem e 
-texto para fala.
+O Google afirma que o SIMA 2 é "um passo significativo na direção da IAG 
+(Inteligência Artificial Geral)". Ele pode entender e raciocinar em 
+ambientes 3D complexos, mas o segredo de seu poder está em como ele se 
+auto-treina.
+
+Veja a evolução do aprendizado por reforço (RL) de 'problemas de brinquedo' 
+de nicho para o poder transformador do RLHF do ChatGPT, e então mostramos 
+como o Gemini do Google é usado para alimentar o modelo de recompensa do 
+SIMA 2 — criando um agente de IA autoaperfeiçoável e recursivo.
 
 
-COMO EXECUTAR MODELOS FAL.AI NA DIGITALOCEAN
+COMO CONSTRUIR UM AGENTE DE IA SIMPLES USANDO LANGGRAPH EM 5 MINUTOS
 ────────────────────────────────────────────────────────────────────────
-Execute modelos de geração de imagem e áudio Fal.ai em Python através de 
-um aplicativo Streamlit usando a plataforma Gradient AI da DigitalOcean, 
-com uma única chave de API permitindo acesso a vários provedores de modelos 
-e opções de implantação simples.
+Agentes de IA estão se tornando a solução preferencial para lidar com 
+fluxos de trabalho complexos — e o padrão de agente ReAct do LangGraph faz 
+com que pareça sem esforço. Aprenda como configurar um agente ReAct com 
+LangGraph, criar ferramentas para buscar, deduplicar e filtrar avaliações, 
+bem como criar um agente que encadeia múltiplas etapas de processamento.
 
 
 ════════════════════════════════════════════════════════════════════════
 
-Atualizações de produto
+Atualizações de produtos
 
 ════════════════════════════════════════════════════════════════════════
 
-CONSTRUA BASES DE CONHECIMENTO MAIS INTELIGENTES COM SUPORTE A SITEMAP
+MÉTRICAS DE OBSERVABILIDADE DE GPU JÁ ESTÃO DISPONÍVEIS
 ────────────────────────────────────────────────────────────────────────
-Agora você pode adicionar uma URL de sitemap (no formato .xml) para 
-rastrear uma lista específica de páginas de uma só vez, em vez de adicionar 
-URLs individualmente. Basta inserir seu sitemap (por exemplo, 
-docs.digitalocean.com/sitemap.xml) e, opcionalmente, incluir links de 
-cabeçalho e rodapé ou mídia incorporada para uma indexação mais completa.
+Nossas novas métricas de observabilidade de GPU para Droplets e clusters 
+DOKS já estão ativas, oferecendo dados-chave sobre utilização, temperatura, 
+energia e desempenho de interconexão, todos disponíveis gratuitamente na 
+UI do DigitalOcean Insights, sem necessidade de configuração. Saiba mais.

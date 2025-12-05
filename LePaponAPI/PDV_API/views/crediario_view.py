@@ -3,6 +3,7 @@ from models.crediario_api import CrediarioAPI
 from models.clientes_api import ClientesAPI
 from models.produtos_todos_api import ProdutosTodosAPI
 from models.enviar_conta_cliente import EnviarContaCliente
+from models.salvar_res_whatsapp import WhatsAppMessageSaver
 from models.recebido_api import RecebidoAPI
 import datetime
 import pandas as pd
@@ -15,7 +16,7 @@ import re
 from dotenv import load_dotenv
 from config import BASE_URL
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../../.env'))
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../.env'))
 
 crediario_api = CrediarioAPI(BASE_URL)
 clientes_api = ClientesAPI(BASE_URL)
@@ -26,7 +27,9 @@ API_KEY = os.getenv("MINHA_API_KEY")
 HEADERS = {"x-api-key": API_KEY}
 GRAPH_API_TOKEN = os.getenv("GRAPH_API_TOKEN")
 
-
+# Configuração para salvar mensagens do WhatsApp
+DIRECT_MESSAGE_API_URL = os.getenv("DIRECT_MESSAGE_API_URL", "https://seu-servidor.com/direct-message")
+DIRECT_MESSAGE_API_KEY = os.getenv("DIRECT_MESSAGE_API_KEY", API_KEY)
 
 print(f"Graph API Token: {GRAPH_API_TOKEN}")
 
@@ -459,6 +462,29 @@ def crediario_view(page: ft.Page):
                 if resposta.get('messages'):
                     msg.value = f"Conta enviada para o cliente via WhatsApp! Arquivo: {arquivo_mais_recente}"
                     msg.color = "green"
+                    
+                    # Salvar a mensagem enviada no servidor
+                    try:
+                        message_data = resposta.get('messages', [])[0]
+                        wamid = message_data.get('id', '')
+                        
+                        if wamid:
+                            saver = WhatsAppMessageSaver(
+                                api_url=DIRECT_MESSAGE_API_URL,
+                                api_key=DIRECT_MESSAGE_API_KEY
+                            )
+                            
+                            save_response = saver.save_pdf_message(
+                                session_id=numero_cliente,
+                                whatsapp_message_id=wamid,
+                                pdf_title=f"Conta Cliente - {cliente_nome}",
+                                media_url=pdf_url,
+                                local_filename=nome_arquivo_servidor
+                            )
+                            print(f"Mensagem salva no servidor: {save_response}")
+                    except Exception as save_err:
+                        print(f"Erro ao salvar mensagem no servidor: {save_err}")
+                        # Não falha o envio se houver erro ao salvar
                 else:
                     msg.value = f"Falha ao enviar pelo WhatsApp: {resposta}"
                     msg.color = "orange"

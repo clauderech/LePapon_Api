@@ -3,6 +3,7 @@ from models.crediario_api import CrediarioAPI
 from models.clientes_api import ClientesAPI
 from models.produtos_todos_api import ProdutosTodosAPI
 from models.enviar_conta_cliente import EnviarContaCliente
+from models.salvar_res_whatsapp import WhatsAppMessageSaver
 from models.recebido_api import RecebidoAPI
 import datetime
 import pandas as pd
@@ -29,6 +30,10 @@ load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../../../.en
 API_KEY = os.getenv("MINHA_API_KEY")
 HEADERS = {"x-api-key": API_KEY}
 GRAPH_API_TOKEN = os.getenv("GRAPH_API_TOKEN")
+
+# Configuração para salvar mensagens do WhatsApp
+DIRECT_MESSAGE_API_URL = os.getenv("DIRECT_MESSAGE_API_URL", "https://seu-servidor.com/direct-message")
+DIRECT_MESSAGE_API_KEY = os.getenv("DIRECT_MESSAGE_API_KEY", API_KEY)
 
 def get_saldo_recebido_por_cliente(cliente_id):
     """
@@ -279,12 +284,6 @@ def crediario_view(page: ft.Page):
                 larguras_colunas
             )
             
-            # Envia via WhatsApp
-            enviar_conta = EnviarContaCliente(
-                token=GRAPH_API_TOKEN,
-                phone_number_id=""  # Configurar conforme necessário
-            )
-            
             # Busca dados do cliente
             cliente = next((c for c in view_helper.clientes if str(c.get('id', '')) == str(cliente_id)), None)
             if not cliente:
@@ -296,13 +295,61 @@ def crediario_view(page: ft.Page):
                 view_helper.mostrar_mensagem("Cliente não possui telefone cadastrado.", "red")
                 return
             
-            # Envia a conta
-            resultado = enviar_conta.enviar_pdf(cliente_id, temp_file, telefone)
+            # Envia via WhatsApp
+            enviar_conta = EnviarContaCliente(
+                token=GRAPH_API_TOKEN,
+                phone_number_id="469403086249830"
+            )
             
-            if "sucesso" in str(resultado).lower():
-                view_helper.mostrar_mensagem("Conta enviada via WhatsApp com sucesso!", "green")
-            else:
-                view_helper.mostrar_mensagem(f"Erro ao enviar: {resultado}", "red")
+            # Prepara nome do arquivo e URL
+            cliente_nome = f"{cliente.get('nome', '')} {cliente.get('sobrenome', '')}".strip()
+            cliente_nome_sanitizado = sanitize_filename(cliente_nome)
+            data_atual = get_current_datetime().strftime('%Y-%m-%d_%H-%M-%S')
+            nome_arquivo_servidor = f"{cliente_nome_sanitizado}_{data_atual}.pdf"
+            
+            # Upload para o servidor
+            try:
+                host = "64.23.179.108"
+                usuario = "claus"
+                caminho_chave = "/home/claus/.ssh/id_rsa"
+                caminho_remoto = f"/var/www/lepapon.com.br/Android-LePapon-Pedidos/files/{nome_arquivo_servidor}"
+                
+                enviar_conta.upload_pdf_droplet(host, usuario, temp_file, caminho_remoto, caminho_chave)
+                
+                # URL pública do PDF
+                pdf_url = f"https://lepapon.com.br/api/pdf/{nome_arquivo_servidor}"
+                
+                # Envia via WhatsApp
+                resultado = enviar_conta.enviar_pdf(telefone, pdf_url, nome_arquivo=nome_arquivo_servidor)
+                
+                if resultado.get('messages'):
+                    view_helper.mostrar_mensagem("Conta enviada via WhatsApp com sucesso!", "green")
+                    
+                    # Salvar a mensagem enviada no servidor
+                    try:
+                        message_data = resultado.get('messages', [])[0]
+                        wamid = message_data.get('id', '')
+                        
+                        if wamid:
+                            saver = WhatsAppMessageSaver(
+                                api_url=DIRECT_MESSAGE_API_URL,
+                                api_key=DIRECT_MESSAGE_API_KEY
+                            )
+                            
+                            save_response = saver.save_pdf_message(
+                                session_id=telefone,
+                                whatsapp_message_id=wamid,
+                                pdf_title=f"Conta Cliente - {cliente_nome}",
+                                media_url=pdf_url,
+                                local_filename=nome_arquivo_servidor
+                            )
+                            print(f"Mensagem salva no servidor: {save_response}")
+                    except Exception as save_err:
+                        print(f"Erro ao salvar mensagem no servidor: {save_err}")
+                else:
+                    view_helper.mostrar_mensagem(f"Erro ao enviar: {resultado}", "red")
+            except Exception as upload_err:
+                view_helper.mostrar_mensagem(f"Erro ao fazer upload ou enviar: {upload_err}", "red")
             
             # Remove arquivo temporário
             try:
