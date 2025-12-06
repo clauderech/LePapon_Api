@@ -3,7 +3,7 @@ from models.crediario_api import CrediarioAPI
 from models.clientes_api import ClientesAPI
 from models.produtos_todos_api import ProdutosTodosAPI
 from models.enviar_conta_cliente import EnviarContaCliente
-from models.salvar_res_whatsapp import WhatsAppMessageSaver
+# from models.salvar_res_whatsapp import WhatsAppMessageSaver
 from models.recebido_api import RecebidoAPI
 import datetime
 import pandas as pd
