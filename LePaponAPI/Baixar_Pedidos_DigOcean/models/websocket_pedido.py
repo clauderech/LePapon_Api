@@ -3,6 +3,7 @@ import asyncio
 import websockets
 import json
 import logging
+import os
 from typing import Set, Optional, Dict, Any
 from datetime import datetime
 from pedidosDropletModel import LePaponAPI
@@ -18,8 +19,12 @@ logger = logging.getLogger(__name__)
 # Constantes
 URL_BASE_API = "http://lepapon.api"  # URL base da API (HTTP, não HTTPS)
 URL_BASE_API_REMOTE = "https://lepapon.com.br"  # URL base da API remota
-WEBSOCKET_URL = "ws://lepapon.com.br:3001"
-WEBSOCKET_TOKEN = "lepapon-secret"  # TODO: Mover para variável de ambiente
+WEBSOCKET_URL = os.getenv("WEBSOCKET_URL", "ws://lepapon.com.br:3001")
+WEBSOCKET_TOKEN = os.getenv(
+    "WEBSOCKET_TOKEN",
+    "cca4fb7a6e655314b83897adf54f41d24c5a5bd60aab4e0175071b7a49150a51",
+)  # Preferir variável de ambiente
+                   
 PING_INTERVAL = 20  # segundos
 PING_TIMEOUT = 30  # segundos
 RECONNECT_DELAY = 5  # segundos

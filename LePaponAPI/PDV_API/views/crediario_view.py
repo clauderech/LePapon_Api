@@ -23,13 +23,17 @@ clientes_api = ClientesAPI(BASE_URL)
 produtos_todos_api = ProdutosTodosAPI(BASE_URL)
 recebido_api = RecebidoAPI(BASE_URL)
 
-API_KEY = os.getenv("MINHA_API_KEY")
+API_KEY: str = os.getenv("MINHA_API_KEY") or ""
 HEADERS = {"x-api-key": API_KEY}
-GRAPH_API_TOKEN = os.getenv("GRAPH_API_TOKEN")
+GRAPH_API_TOKEN: str = os.getenv("GRAPH_API_TOKEN") or ""
 
 # Configuração para salvar mensagens do WhatsApp
-DIRECT_MESSAGE_API_URL = os.getenv("DIRECT_MESSAGE_API_URL", "https://seu-servidor.com/direct-message")
-DIRECT_MESSAGE_API_KEY = os.getenv("DIRECT_MESSAGE_API_KEY", API_KEY)
+DIRECT_MESSAGE_API_URL: str = os.getenv(
+    "DIRECT_MESSAGE_API_URL",
+    "https://seu-servidor.com/direct-message",
+)
+# Garante que nunca seja None (para satisfazer type-checkers e evitar erro em runtime)
+DIRECT_MESSAGE_API_KEY: str = os.getenv("DIRECT_MESSAGE_API_KEY") or API_KEY or ""
 
 print(f"Graph API Token: {GRAPH_API_TOKEN}")
 
@@ -355,7 +359,7 @@ def crediario_view(page: ft.Page):
                 c.save()
                 # Upload PDF para o droplet usando EnviarContaCliente
                 try:
-                    uploader = EnviarContaCliente(token=GRAPH_API_TOKEN, phone_number_id="465787769946848")
+                    uploader = EnviarContaCliente(token=GRAPH_API_TOKEN, phone_number_id="833713429825528")
                     # Parâmetros do droplet
                     host = "64.23.179.108"
                     usuario = "claus"
